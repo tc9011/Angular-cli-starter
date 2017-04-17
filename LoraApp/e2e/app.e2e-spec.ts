@@ -1,6 +1,6 @@
 import { LoraAppPage } from './app.po';
 
-describe('lora-app App', function() {
+describe('lora-app App', () => {
   let page: LoraAppPage;
 
   beforeEach(() => {
