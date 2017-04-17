@@ -7,3 +7,5 @@ npm版本 4.2.0
 
 `npm install -g @angular/cli`
 
+`command not found: ng`的解决办法:
+[npm link angular-cli](https://github.com/angular/angular-cli/issues/503)
