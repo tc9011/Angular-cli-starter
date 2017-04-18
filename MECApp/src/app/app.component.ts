@@ -1,5 +1,6 @@
 import { Component,AfterViewInit} from '@angular/core';
 import echarts from 'echarts';
+import $ from 'jquery/dist/jquery';
 
 @Component({
   selector: 'app-root',
@@ -93,6 +94,7 @@ export class AppComponent implements AfterViewInit{
   ngAfterViewInit():void{
     let that = this;
     that.createCharts();
+    $("#jq").css("background-color","yellow");
   }
 
 

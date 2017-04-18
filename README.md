@@ -11,6 +11,9 @@ npm版本 4.2.0
 
 2. `npm install`
 
+
+
+
 参考文章：
 
 1. [command not found: ng的解决办法](https://github.com/angular/angular-cli/issues/503)
