@@ -4,7 +4,7 @@ node版本 7.9.0
 
 npm版本 4.2.0
 
-已经引入了Angular Material、ngx-bootstrap、bootstrap、karma-firefox-launcher、fontawesome、echarts、jQuery。
+已经引入了Angular Material、ngx-bootstrap、bootstrap、karma-firefox-launcher、fontawesome、echarts、jQuery、moment.js。
 
 使用：
 1. `npm install @angular/cli@latest`或者按照参考文章1中，使用`npm link @angular/cli`

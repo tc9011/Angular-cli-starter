@@ -1,6 +1,7 @@
 import { Component,AfterViewInit} from '@angular/core';
 import echarts from 'echarts';
 import $ from 'jquery/dist/jquery';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-root',
@@ -95,6 +96,7 @@ export class AppComponent implements AfterViewInit{
     let that = this;
     that.createCharts();
     $("#jq").css("background-color","yellow");
+    console.log('today is', moment());
   }
 
 
