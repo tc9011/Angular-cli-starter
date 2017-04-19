@@ -15,14 +15,14 @@ npm版本 4.2.0
 3. `ng serve --open`
 
 ***
-##command not found: ng的解决办法
+command not found: ng的解决办法
 
 1. 在安装node的文件夹下找到/lib/node_modules/angular-cli/bin/
 2. 然后在终端中pwd输出路径，
 3. 在root目录下找到~/bash_profile文件，用vim打开，把下面路径两个字换成刚刚得到的路径，然后写入文件中
 `alias ng="路径/ng"`
 ***
-##关于AOT和摇树优化
+关于AOT和摇树优化
 
 打开命令行，进入NiceFish根目录，执行以下命令：
 `ng build --prod --aot`
