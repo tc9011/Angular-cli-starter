@@ -1,15 +1,18 @@
 import { Component,AfterViewInit} from '@angular/core';
+
 import echarts from 'echarts';
 import $ from 'jquery/dist/jquery';
 import * as moment from 'moment';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements AfterViewInit{
   title = 'app works!';
+
   option:any = {
     title: {
       text: 'ECharts 入门示例',
@@ -90,6 +93,7 @@ export class AppComponent implements AfterViewInit{
     let myChart:any = echarts.init(dom, 'macarons');
     myChart.setOption(that.option);
   }
+
 
 
   ngAfterViewInit():void{

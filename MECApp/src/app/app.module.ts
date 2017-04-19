@@ -4,17 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-/*test material*/
-import {MdAutocompleteModule,MdButtonModule, MdCheckboxModule,MdTabsModule,MdInputModule,MdRadioModule,MdSelectModule,MdSliderModule,MdSlideToggleModule,MdMenuModule,MdSidenavModule,MdToolbarModule,MdListModule,MdGridListModule,MdCardModule,MdButtonToggleModule,MdChipsModule,MdIconModule,MdProgressSpinnerModule,MdProgressBarModule,MdDialogModule,MdTooltipModule,MdSnackBarModule} from '@angular/material';
-import 'hammerjs';
-/*test material*/
-
-// test ngx-bootstrap
 import { AlertModule } from 'ngx-bootstrap';
-// test ngx-bootstrap
-
 
 import { AppComponent } from './app.component';
+import {SharedModule} from "./shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -25,35 +18,8 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    /*test material*/
-    MdButtonModule,
-    MdCheckboxModule,
-    MdAutocompleteModule,
-    MdTabsModule,
-    MdInputModule,
-    MdRadioModule,
-    MdSelectModule,
-    MdSliderModule,
-    MdSlideToggleModule,
-    MdMenuModule,
-    MdSidenavModule,
-    MdToolbarModule,
-    MdListModule,
-    MdGridListModule,
-    MdCardModule,
-    MdButtonToggleModule,
-    MdChipsModule,
-    MdIconModule,
-    MdProgressSpinnerModule,
-    MdProgressBarModule,
-    MdDialogModule,
-    MdTooltipModule,
-    MdSnackBarModule,
-    /*test material*/
-
-    // test ngx-bootstrap
+    SharedModule,
     AlertModule.forRoot()
-    // test ngx-bootstrap
   ],
   providers: [],
   bootstrap: [AppComponent]
