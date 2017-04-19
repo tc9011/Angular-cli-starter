@@ -8,9 +8,9 @@ npm版本 4.2.0
 已经引入了Angular Material、ngx-bootstrap、bootstrap、karma-firefox-launcher、fontawesome、echarts、jQuery、moment.js。
 
 使用：
-1. `npm install @angular/cli@latest`（或者按照参考文章1中，使用`npm link @angular/cli`，此方法未验证）
+1. `npm install`
 
-2. `npm install`
+2. `npm install @angular/cli@latest`（或者按照参考文章1中，使用`npm link @angular/cli`，此方法未验证）
 
 3. `ng serve --open`
 
