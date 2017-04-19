@@ -11,7 +11,7 @@ npm版本 4.2.0
 
 2. `npm install`
 
-
+3. `ng serve --open`
 
 
 参考文章：
