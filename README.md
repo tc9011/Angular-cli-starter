@@ -24,3 +24,4 @@ npm版本 4.2.0
 4. [预 (AOT) 编译器
 ](https://angular.cn/docs/ts/latest/cookbook/aot-compiler.html)
 5. [Angular2 AoT编译以及Rollup摇树优化](http://blog.csdn.net/zsz459520690/article/details/54376162)
+6. [anuglar-2-animate.css-example](https://github.com/CanKattwinkel/anuglar-2-animate.css-example)和[Angular 2 Animate.css Tutorial – How to use Animate.CSS in NG2 Application?](https://blog.thecodecampus.de/angular-2-animate-css-tutorial-use-animate-css-ng2-application/)
