@@ -8,19 +8,17 @@ npm版本 4.2.0
 已经引入了Angular Material、ngx-bootstrap、bootstrap、karma-firefox-launcher、fontawesome、echarts、jQuery、moment.js。
 
 使用：
-1. `npm install`
-
-2. `npm install @angular/cli@latest`（或者按照参考文章1中，使用`npm link @angular/cli`，此方法未验证）
-
-3. `ng serve --open`
-
-***
-command not found: ng的解决办法
-
 1. 在安装node的文件夹下找到/lib/node_modules/angular-cli/bin/
-2. 然后在终端中pwd输出路径，
+
+2. 然后在终端中pwd输出路径
+
 3. 在root目录下找到~/bash_profile文件，用vim打开，把下面路径两个字换成刚刚得到的路径，然后写入文件中
 `alias ng="路径/ng"`
+
+4. 在项目根目录执行`npm install `
+
+5. `ng serve --open`
+
 ***
 关于AOT和摇树优化
 
