@@ -13,6 +13,7 @@ npm版本 4.2.0
 2. 然后在终端中pwd输出路径
 
 3. 在root目录下找到~/bash_profile文件，用vim打开，把下面路径两个字换成刚刚得到的路径，然后写入文件中
+
 `alias ng="路径/ng"`
 
 4. 在项目根目录执行`npm install `
