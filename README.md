@@ -7,7 +7,7 @@ npm版本 4.2.0
 ***
 已经引入了Angular Material、ngx-bootstrap、bootstrap、karma-firefox-launcher、fontawesome、echarts、jQuery、moment.js。
 
-使用：
+## 使用
 1. 在安装node的文件夹下找到/lib/node_modules/angular-cli/bin/
 
 2. 然后在终端中pwd输出路径
@@ -23,7 +23,7 @@ npm版本 4.2.0
 6. `ng serve --open`
 
 ***
-关于AOT和摇树优化
+## 关于AOT和摇树优化
 
 打开命令行，进入NiceFish根目录，执行以下命令：
 `ng build --prod --aot`
@@ -31,6 +31,13 @@ npm版本 4.2.0
 加上--prod参数之后，angular-cli会自动启用TreeShaking（摇树）特性，简而言之，就是把用不到的包全部剔除掉，就像从树上把枯叶子摇下来一样，加上--aot参数是让angular-cli启动预编译特性。
 
 【请注意】最新版本的angular-cli已经内置了对AOT和TreeShaking的支持，只要像上面这样在build的时候加上--prod和--aot参数就可以了，不需要再做任何其它任何配置工作，官方网站上的那一篇指南有点过时了。
+
+***
+## 注意事项
+
+目录结构如dir-desc.txt文件。
+
+项目中新建css文件时，后缀名统一为.scss
 
 ***
 参考文章：
