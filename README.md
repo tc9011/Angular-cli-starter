@@ -37,7 +37,7 @@ npm版本 4.2.0
 
 目录结构如dir-desc.txt文件。
 
-项目中新建css文件时，后缀名统一为.scss
+项目中新建css文件时，后缀名统一为.scss。scss完全兼容css。scss的使用可以看参考文章7。
 
 ***
 参考文章：
@@ -51,3 +51,4 @@ npm版本 4.2.0
 ](https://angular.cn/docs/ts/latest/cookbook/aot-compiler.html)
 5. [【重要】启用AOT+TreeShaking+Gzip大幅度压缩Angular2应用的体积 ](https://my.oschina.net/mumu/blog/830742)和[大漠穷秋Angular4完整案例](http://git.oschina.net/mumu-osc/NiceFish)
 6. [anuglar-2-animate.css-example](https://github.com/CanKattwinkel/anuglar-2-animate.css-example)和[Angular 2 Animate.css Tutorial – How to use Animate.CSS in NG2 Application?](https://blog.thecodecampus.de/angular-2-animate-css-tutorial-use-animate-css-ng2-application/)
+7. [Sass入门](http://tc9011.com/2017/04/08/Sass%E5%85%A5%E9%97%A8/)
