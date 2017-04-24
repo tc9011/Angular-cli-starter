@@ -26,7 +26,7 @@ npm版本 4.2.0
 
 ***
 ### 安装Sass
-sass基于Ruby语言开发而成，因此安装sass前需要安装Ruby（mac自带ruby,windows下安装参考[Sass官网](https://www.sass.hk/install/)）。
+sass基于Ruby语言开发而成，因此安装sass前需要安装Ruby，下面以linux系统安装为例子（mac自带ruby,windows下安装参考[Sass官网](https://www.sass.hk/install/)）
 
 1. 去[Ruby](http://www.ruby-lang.org/en/downloads/)官网下载Ruby 2.4.1版本到本地
 
