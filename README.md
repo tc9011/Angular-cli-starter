@@ -75,6 +75,7 @@ Done installing documentation for sass after 6 secon
 
 ### 引入包
 1. 引入ngx-bootstrap
+
 在所要引入的模块的module文件中import就行：
 ```typescript
 import { AlertModule } from 'ngx-bootstrap';
