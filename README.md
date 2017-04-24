@@ -22,6 +22,8 @@ npm版本 4.2.0
 
 6. `ng serve --open`
 
+注：1-4步可以用`npm i @angular/cli@latest -g`代替
+
 ***
 ### 安装Sass
 sass基于Ruby语言开发而成，因此安装sass前需要安装Ruby。
