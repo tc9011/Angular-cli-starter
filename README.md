@@ -72,6 +72,24 @@ Done installing documentation for sass after 6 secon
 【请注意】最新版本的angular-cli已经内置了对AOT和TreeShaking的支持，只要像上面这样在build的时候加上--prod和--aot参数就可以了，不需要再做任何其它任何配置工作，官方网站上的那一篇指南有点过时了。
 
 ***
+
+### 引入包
+1. 引入ngx-bootstrap
+在所要引入的模块的module文件中import就行：
+```typescript
+import { AlertModule } from 'ngx-bootstrap';
+@NgModule({
+  imports: [
+    AlertModule.forRoot(),
+  ]
+})
+export class XXXModule { }
+```
+组件列表参考官网：[ngx-bootstrap组件](https://valor-software.com/ngx-bootstrap/#/)
+
+
+***
+
 ### 注意事项
 
 目录结构如dir-desc.txt文件。
