@@ -128,4 +128,4 @@ import * as moment from 'moment';
 ](https://angular.cn/docs/ts/latest/cookbook/aot-compiler.html)
 5. [【重要】启用AOT+TreeShaking+Gzip大幅度压缩Angular2应用的体积 ](https://my.oschina.net/mumu/blog/830742)和[大漠穷秋Angular4完整案例](http://git.oschina.net/mumu-osc/NiceFish)
 6. [anuglar-2-animate.css-example](https://github.com/CanKattwinkel/anuglar-2-animate.css-example)和[Angular 2 Animate.css Tutorial – How to use Animate.CSS in NG2 Application?](https://blog.thecodecampus.de/angular-2-animate-css-tutorial-use-animate-css-ng2-application/)
-7. [Sass入门](http://tc9011.com/2017/04/08/Sass%E5%85%A5%E9%97%A8/)
+7. [Sass官网](http://www.sass.hk/)和[Sass入门](http://tc9011.com/2017/04/08/Sass%E5%85%A5%E9%97%A8/)
