@@ -10,12 +10,10 @@ import { AlertModule,CarouselModule,ButtonsModule,ModalModule,TimepickerModule,T
 import { AppComponent } from './app.component';
 import {SharedModule} from "./shared/shared.module";
 import {appRoutes} from './app.routes';
-import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent
   ],
   imports: [
     BrowserModule,

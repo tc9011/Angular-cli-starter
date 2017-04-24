@@ -1,14 +1,21 @@
 import { RouterModule } from '@angular/router';
 import {HomepageComponent} from "./homepage/homepage.component";
+import { AppComponent } from './app.component';
 
 export const appRoutes=[
   {
     path:'',
-    redirectTo:'home',
+    redirectTo:'homepage',
     pathMatch:'full'
   },
   {
-    path:'home',
-    component: HomepageComponent
+    path:'homepage',
+    loadChildren: './homepage/homepage.module#HomepageModule',
+    // data: {preload: true}
+    // component: HomepageComponent
+  },
+  {
+    path:'**',//fallback router must in the last
+    loadChildren: './homepage/homepage.module#HomepageModule'
   }
 ];

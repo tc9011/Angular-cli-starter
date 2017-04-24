@@ -22,7 +22,8 @@ npm版本 4.2.0
 
 6. `ng serve --open`
 
-注：1-4步可以用`npm i @angular/cli@latest -g`代替
+注： 1-4步可以用`npm i @angular/cli@latest -g`代替;
+    如果项目在虚机中，需要在外部浏览器访问，可以查询到虚机ip地址后，用`ng serve --host ip地址`来起服务，在外部用虚机地址+端口号访问。
 
 ***
 ### 安装Sass
