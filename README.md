@@ -85,7 +85,7 @@ import { AlertModule } from 'ngx-bootstrap';
 })
 export class XXXModule { }
 ```
-组件列表参考官网：[ngx-bootstrap组件](https://valor-software.com/ngx-bootstrap/#/)
+组件列表及使用参考官网：[ngx-bootstrap组件](https://valor-software.com/ngx-bootstrap/#/)
 
 2. 引入Angular Material
 ```typescript
@@ -97,6 +97,7 @@ import { MdAutocompleteModule } from '@angular/material';
 })
 export class XXXModule { }
 ```
+组件列表及使用参考官网：[Angular Material](https://material.angular.io/)
 
 3. 引入echarts、jQuery、moment.js
 在所需**组件**中import就行：
