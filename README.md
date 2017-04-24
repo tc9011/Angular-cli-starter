@@ -23,6 +23,24 @@ npm版本 4.2.0
 6. `ng serve --open`
 
 ***
+### 安装Sass
+sass基于Ruby语言开发而成，因此安装sass前需要安装Ruby。
+
+1. 去[Ruby](http://www.ruby-lang.org/en/downloads/)官网下载Ruby 2.4.1版本到本地
+
+2. 分别运行以下命令安装：
+
+```shell
+cd ruby-2.2.3
+./configure
+make
+sudo make install
+```
+3. 安装完后输入`ruby -v`，若出现ruby版本号表示安装成功
+
+
+
+***
 ### 关于AOT和摇树优化
 
 打开命令行，进入NiceFish根目录，执行以下命令：
