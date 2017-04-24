@@ -64,7 +64,7 @@ Done installing documentation for sass after 6 secon
 ***
 ### 关于AOT和摇树优化
 
-打开命令行，进入NiceFish根目录，执行以下命令：
+打开命令行，进入MECapp根目录，执行以下命令：
 `ng build --prod --aot`
 
 加上--prod参数之后，angular-cli会自动启用TreeShaking（摇树）特性，简而言之，就是把用不到的包全部剔除掉，就像从树上把枯叶子摇下来一样，加上--aot参数是让angular-cli启动预编译特性。
