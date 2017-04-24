@@ -52,7 +52,9 @@ Installing ri documentation for sass-3.x.x
 Done installing documentation for sass after 6 secon
 1 gem installed
 ```
-安装完成后，在终端输入`sass -v`和`compass -v`，若出现版本号表示安装成功
+安装完成后，在终端输入`sass -v`和`compass -v`，若出现版本号表示安装成功。
+
+若遇到gem下载不稳定，可以参考[官网](https://www.sass.hk/install/)更换gem源
 
 ***
 ### 关于AOT和摇树优化
