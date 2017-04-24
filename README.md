@@ -117,7 +117,7 @@ import * as moment from 'moment';
 项目中新建css文件时，后缀名统一为.scss。scss完全兼容css。scss的使用可以看参考文章7。
 
 ***
-参考文章：
+### 参考文章：
 
 1. [command not found: ng的解决办法](https://github.com/angular/angular-cli/issues/503)
 
