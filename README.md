@@ -38,7 +38,21 @@ sudo make install
 ```
 3. 安装完后输入`ruby -v`，若出现ruby版本号表示安装成功
 
-
+ruby安装完成后就可以安装sass和Compass了,在ruby目录下打开终端，输入：
+```shell
+gem install sass
+gem install compass
+```
+每个安装过程都会看到如下输出：
+```shell
+Fetching: sass-3.x.x.gem (100%)
+Successfully installed sass-3.x.x
+Parsing documentation for sass-3.x.x
+Installing ri documentation for sass-3.x.x
+Done installing documentation for sass after 6 secon
+1 gem installed
+```
+安装完成后，在终端输入`sass -v`和`compass -v`，若出现版本号表示安装成功
 
 ***
 ### 关于AOT和摇树优化
