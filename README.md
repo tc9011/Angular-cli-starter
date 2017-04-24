@@ -16,7 +16,7 @@ npm版本 4.2.0
 
     `alias ng="路径/ng"`
     
-4. 在终端执行'. ~/bash_profile'
+4. 在终端执行'. ~/.bash_profile'
 
 5. 在项目根目录执行`npm install `
 
