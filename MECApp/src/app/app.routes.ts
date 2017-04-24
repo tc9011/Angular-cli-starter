@@ -11,8 +11,6 @@ export const appRoutes=[
   {
     path:'homepage',
     loadChildren: './homepage/homepage.module#HomepageModule',
-    // data: {preload: true}
-    // component: HomepageComponent
   },
   {
     path:'**',//fallback router must in the last
