@@ -33,7 +33,7 @@ sass基于Ruby语言开发而成，因此安装sass前需要安装Ruby。
 2. 分别运行以下命令安装：
 
 ```shell
-cd ruby-2.2.3
+cd ruby-2.4.1
 ./configure
 make
 sudo make install
