@@ -5,7 +5,7 @@
 │  │  ├─add-comment
 │  │  ├─model
 │  │  └─services
-│  ├─home 							//这是首页组件
+│  ├─homepage 							//这是首页组件
 │  │  ├─online-contact
 │  │  └─social-channel
 │  ├─manage                         //这是管理员后台组件
@@ -37,8 +37,7 @@
 │  │  └─user-register               //响应式表单请参考这个目录
 │  │      └─directives
 │  └─utils
-├─assets 							//这个目录里面是一些CSS、字体图标、图片等
-│  ├─bootstrap-v3.3.7
+├─assets 							//这个目录里面是一些CSS、字体图标、图片等，主要用来存放静态资源
 │  ├─css
 │  ├─fonts
 │  │  ├─bootstrap
