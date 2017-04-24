@@ -87,7 +87,24 @@ export class XXXModule { }
 ```
 组件列表参考官网：[ngx-bootstrap组件](https://valor-software.com/ngx-bootstrap/#/)
 
+2. 引入Angular Material
+```typescript
+import { MdAutocompleteModule } from '@angular/material';
+@NgModule({
+  imports: [
+    MdAutocompleteModule,
+  ]
+})
+export class XXXModule { }
+```
 
+3. 引入echarts、jQuery、moment.js
+在所需**组件**中import就行：
+```typescript
+import echarts from 'echarts';
+import $ from 'jquery/dist/jquery';
+import * as moment from 'moment';
+```
 ***
 
 ### 注意事项
