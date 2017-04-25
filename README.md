@@ -25,7 +25,8 @@ npm版本 4.2.0
 
 7. `ng serve --open`
 
-注： 1. 1-4步可以用`npm i @angular/cli@latest -g`代替，而且不会经常需要执行第四步;
+注：
+ 1. 1-4步可以用`npm i @angular/cli@latest -g`代替，而且不会经常需要执行第四步;
 
  2. 如果项目在虚机中，需要在外部浏览器访问，可以查询到虚机ip地址后，用`ng serve --host ip地址`来起服务，在外部用虚机地址+端口号访问。
 
@@ -66,7 +67,7 @@ Done installing documentation for sass after 6 secon
 ***
 ### 关于AOT和摇树优化
 
-打开命令行，进入MECapp根目录，执行以下命令：
+打开命令行，进入App根目录，执行以下命令：
 `ng build --prod --aot`
 
 加上--prod参数之后，angular-cli会自动启用TreeShaking（摇树）特性，简而言之，就是把用不到的包全部剔除掉，就像从树上把枯叶子摇下来一样，加上--aot参数是让angular-cli启动预编译特性。
