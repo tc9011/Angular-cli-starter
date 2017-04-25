@@ -1,7 +1,6 @@
 import { Component,AfterViewInit} from '@angular/core';
 import { ActivatedRoute, Router, ActivatedRouteSnapshot, RouterState, RouterStateSnapshot } from '@angular/router';
 
-
 @Component({
   moduleId: module.id,
   selector: 'app-root',
