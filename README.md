@@ -9,7 +9,7 @@ npm版本 4.2.0
 已经引入了Angular Material、ngx-bootstrap、bootstrap、karma-firefox-launcher、fontawesome、echarts、jQuery、moment.js。
 
 ### 使用
-1. 在安装node的文件夹下找到/lib/node_modules/angular-cli/bin/
+1. 在node_modules的文件夹下找到/node_modules/@angular/cli/bin/
 
 2. 然后在终端中pwd输出路径
 
@@ -17,7 +17,7 @@ npm版本 4.2.0
 
     `alias ng="路径/ng"`
     
-4. 在终端执行'. ~/.bash_profile'
+4. 在终端执行'. ~/.bash_profile'(如果遇到command not found: ng，重新运行一下这个命令)
 
 5. 项目中使用了sass做css预编译,因此需要安装sass,安装方法见下文
 
@@ -25,7 +25,7 @@ npm版本 4.2.0
 
 7. `ng serve --open`
 
-注： 1. 1-4步可以用`npm i @angular/cli@latest -g`代替;
+注： 1. 1-4步可以用`npm i @angular/cli@latest -g`代替，而且不会经常需要执行第四步;
 
  2. 如果项目在虚机中，需要在外部浏览器访问，可以查询到虚机ip地址后，用`ng serve --host ip地址`来起服务，在外部用虚机地址+端口号访问。
 
