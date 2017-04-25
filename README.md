@@ -19,9 +19,11 @@ npm版本 4.2.0
     
 4. 在终端执行'. ~/.bash_profile'
 
-5. 在项目根目录执行`npm install `
+5. 项目中使用了sass做css预编译,因此需要安装sass,安装方法见下文
 
-6. `ng serve --open`
+6. 在项目根目录执行`npm install `
+
+7. `ng serve --open`
 
 注： 1. 1-4步可以用`npm i @angular/cli@latest -g`代替;
 
@@ -114,7 +116,7 @@ import * as moment from 'moment';
 
 目录结构如dir-desc.txt文件。
 
-项目中新建css文件时，后缀名统一为.scss。scss完全兼容css。scss的使用可以看参考文章7。
+项目中新建css文件时，后缀名统一为.scss。scss完全兼容css(可以在scss文件中直接写css)。scss的使用可以看参考文章7。
 
 ***
 ### 参考文章：
