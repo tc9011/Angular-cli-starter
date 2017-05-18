@@ -1,7 +1,6 @@
 import { Component, OnInit ,AfterViewInit} from '@angular/core';
 
 import echarts from 'echarts';
-import $ from 'jquery/dist/jquery';
 import * as moment from 'moment';
 
 @Component({

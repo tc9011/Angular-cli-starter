@@ -104,11 +104,9 @@ export class XXXModule { }
 组件列表及使用参考官网：[Angular Material](https://material.angular.io/)
 
 3. 引入echarts、jQuery、moment.js
-
-在所需**组件**中import就行：
+jQuery已经引入（.angular.json和typings.d.ts），直接可以用，其他两个插件需要在所需**组件**中import就行：
 ```typescript
 import echarts from 'echarts';
-import $ from 'jquery/dist/jquery';
 import * as moment from 'moment';
 ```
 ***
