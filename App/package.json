@@ -4,8 +4,8 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "ng serve --open --port 4200 --host 0.0.0.0 --disable-host-check --bh /app",
+    "build": "ng build --prod --aot --bh /app/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -19,7 +19,7 @@
     "@angular/core": "^4.1.3",
     "@angular/forms": "^4.1.3",
     "@angular/http": "^4.1.3",
-    "@angular/material": "^2.0.0-beta.3",
+    "@angular/material": "^2.0.0-beta.6",
     "@angular/platform-browser": "^4.1.3",
     "@angular/platform-browser-dynamic": "^4.1.3",
     "@angular/platform-server": "^4.1.3",

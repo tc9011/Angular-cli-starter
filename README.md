@@ -16,14 +16,14 @@ npm版本 4.2.0
 3. 在root目录下找到~/bash_profile文件，用vim打开，把下面路径两个字换成刚刚得到的路径，然后写入文件中
 
     `alias ng="路径/ng"`
-    
+
 4. 在终端执行'. ~/.bash_profile'(如果遇到command not found: ng，重新运行一下这个命令)
 
 5. 项目中使用了sass做css预编译,因此需要安装sass,安装方法见下文
 
 6. 在项目根目录执行`npm install `
 
-7. `ng serve --open`
+7. `npm start`
 
 注：
  1. 1-4步可以用`npm i @angular/cli@latest -g`代替，而且不会经常需要执行第四步;
@@ -92,6 +92,8 @@ export class XXXModule { }
 组件列表及使用参考官网：[ngx-bootstrap组件](https://valor-software.com/ngx-bootstrap/#/)
 
 2. 引入Angular Material
+可以在`.angular-cli.json`的`styles`中修改Material主题颜色，暂时导入了`"../node_modules/@angular/material/prebuilt-themes/indigo-pink.css"`这个主题色，该目录下面还提供了其他主题色。
+
 ```typescript
 import { MdAutocompleteModule } from '@angular/material';
 @NgModule({
@@ -104,7 +106,7 @@ export class XXXModule { }
 组件列表及使用参考官网：[Angular Material](https://material.angular.io/)
 
 3. 引入echarts、jQuery、moment.js
-jQuery已经引入（.angular.json和typings.d.ts），直接可以用，其他两个插件需要在所需**组件**中import就行：
+   jQuery已经引入（.angular.json和typings.d.ts），直接可以用，其他两个插件需要在所需**组件**中import就行：
 ```typescript
 import echarts from 'echarts';
 import * as moment from 'moment';
@@ -117,6 +119,8 @@ import * as moment from 'moment';
 
 项目中新建css文件时，后缀名统一为.scss。scss完全兼容css(可以在scss文件中直接写css)。scss的使用可以看参考文章7。
 
+
+
 ***
 ### 参考文章：
 
@@ -126,7 +130,7 @@ import * as moment from 'moment';
 
 3. [如何利用angular-cli组织项目结构](https://segmentfault.com/a/1190000008623106)
 4. [预 (AOT) 编译器
-](https://angular.cn/docs/ts/latest/cookbook/aot-compiler.html)
+   ](https://angular.cn/docs/ts/latest/cookbook/aot-compiler.html)
 5. [【重要】启用AOT+TreeShaking+Gzip大幅度压缩Angular2应用的体积 ](https://my.oschina.net/mumu/blog/830742)和[大漠穷秋Angular4完整案例](http://git.oschina.net/mumu-osc/NiceFish)
 6. [anuglar-2-animate.css-example](https://github.com/CanKattwinkel/anuglar-2-animate.css-example)和[Angular 2 Animate.css Tutorial – How to use Animate.CSS in NG2 Application?](https://blog.thecodecampus.de/angular-2-animate-css-tutorial-use-animate-css-ng2-application/)
 7. [Sass官网](http://www.sass.hk/)和[Sass入门](http://tc9011.com/2017/04/08/Sass%E5%85%A5%E9%97%A8/)
