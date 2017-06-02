@@ -119,7 +119,11 @@ import * as moment from 'moment';
 
 项目中新建css文件时，后缀名统一为.scss。scss完全兼容css(可以在scss文件中直接写css)。scss的使用可以看参考文章7。
 
+在`package.json`文件中的`start`已经配置为`ng serve --open --port 4200 --host 0.0.0.0 --disable-host-check --bh /app`：
 
+* `--open`：自动打开浏览器
+* `--port`：端口号
+* `--host`：一般
 
 ***
 ### 参考文章：

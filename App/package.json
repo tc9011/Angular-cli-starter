@@ -4,8 +4,8 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --open --port 4200 --host 0.0.0.0 --disable-host-check --bh /app",
-    "build": "ng build --prod --aot --bh /app/",
+    "start": "ng serve --open --port 4200 --host 0.0.0.0 --disable-host-check --proxy-config proxy.conf.json --base-href /app",
+    "build": "ng build --prod --aot --base-href /app/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
