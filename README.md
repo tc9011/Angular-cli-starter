@@ -119,22 +119,25 @@ import * as moment from 'moment';
 
 项目中新建css文件时，后缀名统一为.scss。scss完全兼容css(可以在scss文件中直接写css)。scss的使用可以看参考文章7。
 
-在`package.json`文件中的`start`已经配置为`ng serve --open --port 4200 --host 0.0.0.0 --disable-host-check --bh /app`：
+在`package.json`文件中的`start`已经配置为`ng serve --open --port 4200 --host 0.0.0.0 --disable-host-check --proxy-config proxy.conf.json --base-href /app`：
 
 * `--open`：自动打开浏览器
 * `--port`：端口号
-* `--host`：一般
+* `--host`：一般项目在虚机类，需要通过外部浏览器访问时配置，地址是小网地址
+* `--disable-host-check`：一般项目在虚机类，需要通过外部浏览器访问时配置，参考文章9
+* `--proxy-config` ：是指定和后端联调时的接口及地址文件，`proxy.conf.json`中配置联调接口和地址，参考文章8
+* `--base-href`：是上真实环境的文件目录，会替换`index.html`中的`<base href="/">`，解决路径问题，参考文章10
 
 ***
 ### 参考文章：
 
 1. [command not found: ng的解决办法](https://github.com/angular/angular-cli/issues/503)
-
 2. [Angular 2 升级 Angular 4](http://www.jianshu.com/p/75c19d67d7f8)
-
 3. [如何利用angular-cli组织项目结构](https://segmentfault.com/a/1190000008623106)
-4. [预 (AOT) 编译器
-   ](https://angular.cn/docs/ts/latest/cookbook/aot-compiler.html)
+4. [预 (AOT) 编译器](https://angular.cn/docs/ts/latest/cookbook/aot-compiler.html)
 5. [【重要】启用AOT+TreeShaking+Gzip大幅度压缩Angular2应用的体积 ](https://my.oschina.net/mumu/blog/830742)和[大漠穷秋Angular4完整案例](http://git.oschina.net/mumu-osc/NiceFish)
 6. [anuglar-2-animate.css-example](https://github.com/CanKattwinkel/anuglar-2-animate.css-example)和[Angular 2 Animate.css Tutorial – How to use Animate.CSS in NG2 Application?](https://blog.thecodecampus.de/angular-2-animate-css-tutorial-use-animate-css-ng2-application/)
 7. [Sass官网](http://www.sass.hk/)和[Sass入门](http://tc9011.com/2017/04/08/Sass%E5%85%A5%E9%97%A8/)
+8. [ng serve: support for proxy urls](https://github.com/angular/angular-cli/issues/889)
+9. [Invalid Host header after updating to 1.0.1](https://github.com/angular/angular-cli/issues/6070)
+10. [CSS images with relative path not included in production build](https://github.com/angular/angular-cli/issues/4806)
