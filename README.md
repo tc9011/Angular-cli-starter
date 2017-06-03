@@ -92,7 +92,7 @@ export class XXXModule { }
 组件列表及使用参考官网：[ngx-bootstrap组件](https://valor-software.com/ngx-bootstrap/#/)
 
 2. 引入Angular Material
-可以在`.angular-cli.json`的`styles`中修改Material主题颜色，暂时导入了`"../node_modules/@angular/material/prebuilt-themes/indigo-pink.css"`这个主题色，该目录下面还提供了其他主题色。
+   可以在`.angular-cli.json`的`styles`中修改Material主题颜色，暂时导入了`"../node_modules/@angular/material/prebuilt-themes/indigo-pink.css"`这个主题色，该目录下面还提供了其他主题色。
 
 ```typescript
 import { MdAutocompleteModule } from '@angular/material';
@@ -127,6 +127,12 @@ import * as moment from 'moment';
 * `--disable-host-check`：一般项目在虚机类，需要通过外部浏览器访问时配置，参考文章9
 * `--proxy-config` ：是指定和后端联调时的接口及地址文件，`proxy.conf.json`中配置联调接口和地址，参考文章8
 * `--base-href`：是上真实环境的文件目录，会替换`index.html`中的`<base href="/">`，解决路径问题，参考文章10
+
+如果遇到sass文件错误，可以执行下面命令：
+
+```shell
+npm install node-sass
+```
 
 ***
 ### 参考文章：
