@@ -6,7 +6,7 @@ npm版本 4.2.0
 
 ***
 
-已经引入了Angular Material、ngx-bootstrap、bootstrap、karma-firefox-launcher、fontawesome、echarts、jQuery、moment.js。
+已经引入了Angular Material、ngx-bootstrap、bootstrap、bootstrap-table、karma-firefox-launcher、fontawesome、echarts、jQuery、moment.js。
 
 ### 使用
 1. 在node_modules的文件夹下找到/node_modules/@angular/cli/bin/
