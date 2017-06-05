@@ -99,6 +99,18 @@ export class HomepageComponent implements AfterViewInit {
     that.createCharts();
     $("#jq").css("background-color","yellow");
     console.log('today is', moment());
+    $('#table').bootstrapTable({
+      columns: [{
+        field: 'id',
+        title: 'Item ID'
+      }, {
+        field: 'name',
+        title: 'Item Name'
+      }, {
+        field: 'price',
+        title: 'Item Price'
+      }, ]
+    });
   }
 
 }
