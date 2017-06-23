@@ -8,10 +8,12 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import {SharedModule} from "./shared/shared.module";
 import {appRoutes} from './app.routes';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
