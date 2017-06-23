@@ -1,66 +1,32 @@
 # Angular-cli-starter
 
-node版本 7.9.0
+node版本>= 6.9.x
 
-npm版本 4.2.0
+npm版本 >=3.10.x
 
 ***
 
 已经引入了Angular Material、ngx-bootstrap、bootstrap、bootstrap-table、karma-firefox-launcher、fontawesome、echarts、jQuery、moment.js。
 
 ### 使用
+1. 运行`npm i @angular/cli@latest -g`
+
+2. 在app目录下执行`npm install `
+
+3. `npm start`
+
+注：
+ 如果遇到`command not found: ng`，可以按照下面方法解决：
+
 1. 在node_modules的文件夹下找到/node_modules/@angular/cli/bin/
 
 2. 然后在终端中pwd输出路径
 
 3. 在root目录下找到~/bash_profile文件，用vim打开，把下面路径两个字换成刚刚得到的路径，然后写入文件中
 
-    `alias ng="路径/ng"`
+   `alias ng="路径/ng"`
 
-4. 在终端执行'. ~/.bash_profile'(如果遇到command not found: ng，重新运行一下这个命令)
-
-5. 项目中使用了sass做css预编译,因此需要安装sass,安装方法见下文
-
-6. 在项目根目录执行`npm install `
-
-7. `npm start`
-
-注：
- 1-4步可以用`npm i @angular/cli@latest -g`代替，而且不会经常需要执行第四步;
-
-***
-### 安装Sass
-sass基于Ruby语言开发而成，因此安装sass前需要安装Ruby，下面以linux系统安装为例子（mac自带ruby,windows下安装参考[Sass官网](https://www.sass.hk/install/)）
-
-1. 去[Ruby](http://www.ruby-lang.org/en/downloads/)官网下载Ruby 2.4.1版本到本地
-
-2. 分别运行以下命令安装：
-
-```shell
-cd ruby-2.4.1
-./configure
-make
-sudo make install
-```
-3. 安装完后输入`ruby -v`，若出现ruby版本号表示安装成功
-
-ruby安装完成后就可以安装sass和Compass了,在ruby目录下打开终端，输入：
-```shell
-gem install sass
-gem install compass
-```
-每个安装过程都会看到如下输出：
-```shell
-Fetching: sass-3.x.x.gem (100%)
-Successfully installed sass-3.x.x
-Parsing documentation for sass-3.x.x
-Installing ri documentation for sass-3.x.x
-Done installing documentation for sass after 6 secon
-1 gem installed
-```
-安装完成后，在终端输入`sass -v`和`compass -v`，若出现版本号表示安装成功。
-
-若遇到gem下载不稳定，可以参考[官网](https://www.sass.hk/install/)更换gem源
+4. 在终端执行'. ~/.bash_profile'(如果再遇到command not found: ng，重新运行一下这个命令)
 
 ***
 ### 关于AOT和摇树优化
@@ -112,10 +78,6 @@ import * as moment from 'moment';
 ***
 
 ### 注意事项
-
-目录结构如dir-desc.txt文件。
-
-项目中新建css文件时，后缀名统一为.scss。scss完全兼容css(可以在scss文件中直接写css)。scss的使用可以看参考文章7。
 
 在`package.json`文件中的`start`已经配置为`ng serve --open --port 4200 --host 0.0.0.0 --disable-host-check --proxy-config proxy.conf.json --base-href /app`：
 
