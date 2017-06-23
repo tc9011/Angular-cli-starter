@@ -1,4 +1,4 @@
-import { Component, OnInit ,AfterViewInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import echarts from 'echarts';
 import * as moment from 'moment';
@@ -9,7 +9,8 @@ import * as moment from 'moment';
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.scss']
 })
-export class HomepageComponent implements AfterViewInit {
+export class HomepageComponent implements OnInit {
+  time:any;
 
   option:any = {
     title: {
@@ -94,11 +95,10 @@ export class HomepageComponent implements AfterViewInit {
 
 
 
-  ngAfterViewInit():void {
+  ngOnInit():void {
     let that = this;
     that.createCharts();
     $("#jq").css("background-color", "yellow");
-    console.log('today is', moment());
-
+    this.time = moment().format();
   }
 }
