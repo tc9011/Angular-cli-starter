@@ -1,6 +1,14 @@
 $footer-bgcolor: #F8F8F8;
+$footer-font-color-common: #00abff;
 
 .footer{
   height: 60px;
   background: $footer-bgcolor;
+  span{
+    color: $footer-font-color-common;
+    margin-right: 0.5em;
+  }
+  a{
+    color: $footer-font-color-common;
+  }
 }
