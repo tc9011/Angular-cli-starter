@@ -10,7 +10,7 @@ export const appRoutes=[
   },
   {
     path:'homepage',
-    loadChildren: './homepage/homepage.module#HomepageModule',
+    loadChildren: './homepage/homepage.module#HomepageModule',    //lazy load
   },
   {
     path:'**',//fallback router must in the last
