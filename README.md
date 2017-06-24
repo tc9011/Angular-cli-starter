@@ -1,6 +1,6 @@
 # Angular-cli-starter
 
-查看中文文档：[Angular-cli-starter]()
+查看中文文档：[Angular-cli-starter](https://github.com/tc9011/Angular-cli-starter/raw/master/README_CN.md)
 
 node version >= 6.9.X
 
