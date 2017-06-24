@@ -24,6 +24,7 @@
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/platform-server": "^4.2.4",
     "@angular/router": "^4.2.4",
+    "angular-in-memory-web-api": "^0.3.2",
     "bootstrap": "^3.3.7",
     "bootstrap-table": "^1.11.2",
     "core-js": "^2.4.1",
