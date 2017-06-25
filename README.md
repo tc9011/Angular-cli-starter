@@ -112,7 +112,7 @@ In this project, I added a `proxy.conf.json` in the root of frontend application
 ```json
 {
   "/my-API": {
-    "target": "http://10.63.246.83:2017",       #backend API address
+    "target": "http://10.63.246.83:2017",    //backend API address
     "secure": false,
     "logLevel": "debug",
     "changeOrigin": true
