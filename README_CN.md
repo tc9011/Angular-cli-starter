@@ -9,11 +9,10 @@ npm版本 >=3.10.x
 已经引入了Angular Material、ngx-bootstrap、bootstrap、bootstrap-table、karma-firefox-launcher、fontawesome、echarts、jQuery、moment.js。
 
 ## 使用
-1. 运行`npm i @angular/cli@latest -g`
-
-2. 在app目录下执行`npm install `（如果遇到scss文件编译问题,运行npm install node-sass）
-
-3. `npm start`
+1. `git clone https://github.com/tc9011/Angular-cli-starter.git`
+2. 运行`npm i @angular/cli@latest -g`
+3. 在app目录下执行`npm install `（如果遇到scss文件编译问题,运行npm install node-sass）
+4. `npm start`
 
  如果遇到`command not found: ng`，可以按照下面方法解决：
 
