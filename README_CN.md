@@ -11,7 +11,7 @@ npm版本 >=3.10.x
 ## 使用
 1. 运行`npm i @angular/cli@latest -g`
 
-2. 在app目录下执行`npm install `
+2. 在app目录下执行`npm install `（如果遇到scss文件编译问题,运行npm install node-sass）
 
 3. `npm start`
 
