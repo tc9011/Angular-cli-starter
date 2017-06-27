@@ -1,5 +1,7 @@
 # Angular-cli-starter
 
+[English Document](https://github.com/tc9011/Angular-cli-starter/blob/master/README.md)
+
 node版本>= 6.9.x
 
 npm版本 >=3.10.x
