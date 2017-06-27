@@ -55,7 +55,7 @@ ng g component feature/new-cmp
 
 可以用下面的方法生成组件、指令、管道和服务等:
 
-| 脚手架                                      | 用法                                |
+| 支持类型                                      | 用法                                |
 | ---------------------------------------- | --------------------------------- |
 | [Component](https://github.com/angular/angular-cli/wiki/generate-component) | `ng g component my-new-component` |
 | [Directive](https://github.com/angular/angular-cli/wiki/generate-directive) | `ng g directive my-new-directive` |
