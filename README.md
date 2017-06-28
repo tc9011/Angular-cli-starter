@@ -1,6 +1,6 @@
 # Angular-cli-starter
 
-[![Build Status](https://travis-ci.org/tc9011/Angular-cli-starter.svg?branch=master)](https://travis-ci.org/tc9011/Angular-cli-starter)[![npm][license-badge-url]][license-url]
+[![Build Status](https://travis-ci.org/tc9011/Angular-cli-starter.svg?branch=master)](https://travis-ci.org/tc9011/Angular-cli-starter)
 
 查看中文文档：[Angular-cli-starter](https://github.com/tc9011/Angular-cli-starter/blob/master/README_CN.md)
 
