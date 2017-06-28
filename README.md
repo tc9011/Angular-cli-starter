@@ -1,7 +1,8 @@
 # Angular-cli-starter
 
-[![Build Status](https://travis-ci.org/tc9011/Angular-cli-starter.svg?branch=master)](https://travis-ci.org/tc9011/Angular-cli-starter)
-
+[![Build Status](https://travis-ci.org/tc9011/Angular-cli-starter.svg?branch=master)](https://travis-ci.org/tc9011/Angular-cli-starter)[![npm][license-badge-url]][license-url]
+![](https://img.shields.io/badge/pod-v1.0.0-519dd9.svg)
+![](https://img.shields.io/packagist/l/doctrine/orm.svg)
 查看中文文档：[Angular-cli-starter](https://github.com/tc9011/Angular-cli-starter/blob/master/README_CN.md)
 
 node version >= 6.9.X
