@@ -201,3 +201,7 @@ import * as moment from 'moment';：
 9. [Proxy To Backend](https://github.com/angular/angular-cli/wiki/stories-proxy)
 10. [Invalid Host header after updating to 1.0.1](https://github.com/angular/angular-cli/issues/6070)
 11. [CSS images with relative path not included in production build](https://github.com/angular/angular-cli/issues/4806)
+
+# License
+
+MIT
