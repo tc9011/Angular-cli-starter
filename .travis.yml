@@ -18,5 +18,6 @@ install:
 
 script:
   - npm run build
+  - pwd
 
 sudo: false
