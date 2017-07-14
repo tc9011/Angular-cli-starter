@@ -6,10 +6,10 @@
 /out-tsc
 
 # dependencies
-/node_modules
+/App/node_modules
 
 # IDEs and editors
-.idea
+/.idea
 .project
 .classpath
 .c9/
