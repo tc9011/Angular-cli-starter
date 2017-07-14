@@ -2,14 +2,19 @@ import { Component, OnInit } from '@angular/core';
 
 import echarts from 'echarts';
 import * as moment from 'moment';
+import {fadeIn} from "../shared/animations/fade-in";
+import {flyIn} from "../shared/animations/fly-in";
+
 
 @Component({
   moduleId: module.id,
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.scss']
+  styleUrls: ['./homepage.component.scss'],
+  animations: [fadeIn,flyIn]
 })
 export class HomepageComponent implements OnInit {
+  animation:any;
   time:any;
 
   option:any = {
@@ -31,8 +36,6 @@ export class HomepageComponent implements OnInit {
     toolbox: {
       show: true,
       feature: {
-        // dataView: {show: true, readOnly: true},
-        // magicType: {show: true, type: ['bar']},
         dataZoom: {show: true},
         restore: {show: true},
         saveAsImage: {show: true}
@@ -94,11 +97,17 @@ export class HomepageComponent implements OnInit {
   }
 
 
+  constructor(){}
 
   ngOnInit():void {
     let that = this;
+    that.animation = 'void';
     that.createCharts();
     $("#jq").css("background-color", "yellow");
     this.time = moment().format();
+  }
+
+  toggleState(){
+    this.animation = (this.animation == 'void'? '*' : 'void');
   }
 }

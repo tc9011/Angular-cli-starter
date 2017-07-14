@@ -36,6 +36,12 @@
   </md-input-container>
 </p>
 
+<!--animation example-->
+<button md-button class="animation-button" (click)="toggleState()">active animation</button>
+
+<p [@flyIn]="animation" [@fadeIn]="animation">I'm animation</p>
+<!--animation example-->
+
 <!--test fontawesome-->
 <div class="fontawesome">
   <i class="fa fa-american-sign-language-interpreting fa-5x" aria-hidden="true"></i>

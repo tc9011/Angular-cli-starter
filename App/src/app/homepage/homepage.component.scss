@@ -49,3 +49,19 @@ $common-width: 450px;
   margin: 50px auto;
   text-align: center;
 }
+
+.animation-button,.animation-button ~ p{
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.animation-button{
+  background: #00abff;
+  color: white;
+}
+
+.animation-button ~ p{
+
+}
