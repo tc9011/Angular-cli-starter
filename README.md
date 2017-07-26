@@ -22,7 +22,7 @@ Angular Material、ngx-bootstrap、bootstrap、bootstrap-table、karma-firefox-l
 
 1. `git clone https://github.com/tc9011/Angular-cli-starter.git`
 2. run`npm install @angular/cli@latest -g`
-3. run`npm install `(If you encounter `scss` file compilation problem,run `npm install node-sass `)
+3. run`npm install `(If you encounter compilation problem of `scss` file,run `npm install node-sass `)
 4. run`npm start`
 5. go to [http://0.0.0.0:4200](http://0.0.0.0:4200/) or [http://localhost:4200](http://localhost:4200/) in your browser
 
