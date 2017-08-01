@@ -14,9 +14,8 @@ before_install:
 
 install:
   - cd App/
-  - npm install -g cnpm --registry=https://registry.npm.taobao.org 
-  - cnpm install node-sass
-  - cnpm install
+  - npm install node-sass
+  - npm install
 
 script:
   - cnpm run build
