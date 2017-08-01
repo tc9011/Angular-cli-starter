@@ -19,6 +19,6 @@ install:
   - cnpm install
 
 script:
-  - npm run build
+  - cnpm run build
 
 sudo: false
