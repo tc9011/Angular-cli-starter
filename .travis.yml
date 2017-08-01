@@ -14,7 +14,6 @@ before_install:
 
 install:
   - cd App/
-  - npm install node-sass
   - npm install
 
 script:
