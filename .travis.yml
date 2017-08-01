@@ -18,6 +18,6 @@ install:
   - npm install
 
 script:
-  - cnpm run build
+  - npm run build
 
 sudo: false
