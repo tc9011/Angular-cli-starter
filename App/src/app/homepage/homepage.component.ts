@@ -16,6 +16,7 @@ import {flyIn} from "../shared/animations/fly-in";
 export class HomepageComponent implements OnInit {
   animation:any;
   time:any;
+  demoValue:number;
 
   option:any = {
     title: {
@@ -97,12 +98,13 @@ export class HomepageComponent implements OnInit {
   }
 
 
-  constructor(){}
+  constructor(){
+    this.demoValue = 1;
+  }
 
   ngOnInit():void {
-    let that = this;
-    that.animation = 'void';
-    that.createCharts();
+    this.animation = 'void';
+    this.createCharts();
     $("#jq").css("background-color", "yellow");
     this.time = moment().format();
   }
