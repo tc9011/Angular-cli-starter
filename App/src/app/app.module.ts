@@ -9,11 +9,12 @@ import { AppComponent } from './app.component';
 import {SharedModule} from "./shared/shared.module";
 import {appRoutes} from './app.routes';
 import { AboutComponent } from './about/about.component';
+import {HttpService} from "./shared/services/http.service";
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +25,7 @@ import { AboutComponent } from './about/about.component';
     SharedModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
