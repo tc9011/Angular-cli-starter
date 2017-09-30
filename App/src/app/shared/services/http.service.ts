@@ -9,19 +9,19 @@ export class HttpService {
 
   constructor(private http: HttpClient) { }
 
-  getData(api:string):Observable<any>{
+  public getData(api:string):Observable<any>{
     return this.http.get(api);
   }
 
-  postData(api:string, data:any):Observable<any>{
+  public postData(api:string, data:any):Observable<any>{
     return this.http.get(api, data);
   }
 
-  deleteData(api:string):Observable<any>{
+  public deleteData(api:string):Observable<any>{
     return this.http.delete(api);
   }
 
-  putData(api:string, data:any):Observable<any>{
+  public putData(api:string, data:any):Observable<any>{
     return this.http.put(api,  data);
   }
 }
