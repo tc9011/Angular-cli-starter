@@ -31,14 +31,18 @@ $common-width: 450px;
   width: 700px;
 }
 
-.example-card{
-  width: $common-width;
-  height: 500px;
+.example-card {
+  width: 400px;
   margin: 10px auto;
 }
 
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
 .md-input{
-  width: $common-width;
+  width: 365px;
   margin: 30px auto;
 }
 

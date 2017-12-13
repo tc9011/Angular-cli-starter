@@ -10,30 +10,36 @@
   <button type="button" class="btn btn-lg btn-link">link</button>
 </div>
 
-<Mat-card class="example-card">
-  <div Mat-card-avatar class="example-header-image"></div>
-  <Mat-card-title>Shiba Inu</Mat-card-title>
-  <Mat-card-subtitle>Dog Breed</Mat-card-subtitle>
-
-  <img Mat-card-image src="./assets/imgs/6.jpg" alt="Photo of a Shiba Inu">
-  <Mat-card-content>
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Shiba Inu</mat-card-title>
+    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
     <p>
       The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
       A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
       bred for hunting.
     </p>
-  </Mat-card-content>
-  <Mat-card-actions>
-    <button Mat-button>LIKE</button>
-    <button Mat-button>SHARE</button>
-  </Mat-card-actions>
-</Mat-card>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions>
+</mat-card>
 
-<p class="Mat-input">
-  <Mat-input-container class="example-full-width">
-    <textarea MatInput placeholder="Address 2"></textarea>
-  </Mat-input-container>
-</p>
+<form class="md-input">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Favorite food" value="Sushi">
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Leave a comment"></textarea>
+  </mat-form-field>
+</form>
+
 
 <!--ng-zorro-antd-->
 <p class="antd">antd组件：</p>
