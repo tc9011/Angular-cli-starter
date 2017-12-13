@@ -25,6 +25,8 @@
     "@angular/platform-browser-dynamic": "^5.1.0",
     "@angular/platform-server": "^5.1.0",
     "@angular/router": "^5.1.0",
+    "@ngx-translate/core": "^9.0.1",
+    "@ngx-translate/http-loader": "^2.0.0",
     "bootstrap": "^3.3.7",
     "bootstrap-table": "^1.11.2",
     "core-js": "^2.4.1",
