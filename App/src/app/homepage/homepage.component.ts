@@ -4,6 +4,7 @@ import echarts from 'echarts';
 import * as moment from 'moment';
 import {fadeIn} from "../shared/animations/fade-in";
 import {flyIn} from "../shared/animations/fly-in";
+import {HttpService} from "../shared/services/http.service";
 
 
 @Component({
@@ -90,15 +91,7 @@ export class HomepageComponent implements OnInit {
     }]
   };
 
-  createCharts() {
-    let that = this;
-    let dom:any = document.getElementById("main");
-    let myChart:any = echarts.init(dom, 'macarons');
-    myChart.setOption(that.option);
-  }
-
-
-  constructor(){
+  constructor(private http: HttpService){
     this.demoValue = 1;
   }
 
@@ -109,7 +102,34 @@ export class HomepageComponent implements OnInit {
     this.time = moment().format();
   }
 
+  createCharts() {
+    let that = this;
+    let dom:any = document.getElementById("main");
+    let myChart:any = echarts.init(dom, 'macarons');
+    myChart.setOption(that.option);
+  }
+
   toggleState(){
     this.animation = (this.animation == 'void'? '*' : 'void');
+  }
+
+  postData(){
+    const api = 'API/hero';
+    const heroes = [
+      { id: 0,  name: 'Zero' },
+      { id: 11, name: 'Mr. Nice' },
+      { id: 12, name: 'Narco' },
+      { id: 13, name: 'Bombasto' },
+      { id: 14, name: 'Celeritas' },
+      { id: 15, name: 'Magneta' },
+      { id: 16, name: 'RubberMan' },
+      { id: 17, name: 'Dynama' },
+      { id: 18, name: 'Dr IQ' },
+      { id: 19, name: 'Magma' },
+      { id: 20, name: 'Tornado' }
+    ];
+    this.http.postData(api, heroes).subscribe(() => {
+      console.log('post data');
+    });
   }
 }

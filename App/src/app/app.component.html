@@ -1,32 +1,5 @@
-<header class="navbar navbar-default">
-  <nav class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-              data-target=".navbar-collapse">
-        <span class="sr-only">toggle nav</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">projectname</a>
-    </div>
-    <div class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-        <li routerLinkActive="active"><a routerLink="homepage">home</a></li>
-        <li routerLinkActive="active"><a routerLink="about" (click)="postData()">about</a></li>
-      </ul>
-    </div><!--nav-collapse-->
-  </nav>
-</header>
+<app-navbar></app-navbar>
 
 <router-outlet></router-outlet>
 
-<footer class="footer bs-footer bg-primary">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3 power-by">
-        <span>Powered by</span><a href="https://github.com/tc9011/Angular-cli-starter" target="_blank">tc9011</a>
-      </div>
-    </div>
-  </div>
-</footer>
+<app-footer></app-footer>
