@@ -5,7 +5,7 @@ import {HttpClientModule} from '@angular/common/http';
 
 import { AlertModule,CarouselModule,ButtonsModule,ModalModule,TimepickerModule,TabsModule,SortableModule,RatingModule,PopoverModule,PaginationModule,BsDropdownModule,DatepickerModule,CollapseModule } from 'ngx-bootstrap';
 
-import {MdAutocompleteModule,MdButtonModule, MdCheckboxModule,MdTabsModule,MdInputModule,MdRadioModule,MdSelectModule,MdSliderModule,MdSlideToggleModule,MdMenuModule,MdSidenavModule,MdToolbarModule,MdListModule,MdGridListModule,MdCardModule,MdButtonToggleModule,MdChipsModule,MdIconModule,MdProgressSpinnerModule,MdProgressBarModule,MdDialogModule,MdTooltipModule,MdSnackBarModule} from '@angular/material';
+import {MatAutocompleteModule,MatButtonModule, MatCheckboxModule,MatTabsModule,MatInputModule,MatRadioModule,MatSelectModule,MatSliderModule,MatSlideToggleModule,MatMenuModule,MatSidenavModule,MatToolbarModule,MatListModule,MatGridListModule,MatCardModule,MatButtonToggleModule,MatChipsModule,MatIconModule,MatProgressSpinnerModule,MatProgressBarModule,MatDialogModule,MatTooltipModule,MatSnackBarModule} from '@angular/material';
 
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 
@@ -30,29 +30,29 @@ const sharedModule = [
   BsDropdownModule,
   DatepickerModule,
   CollapseModule,
-  MdButtonModule,
-  MdCheckboxModule,
-  MdAutocompleteModule,
-  MdTabsModule,
-  MdInputModule,
-  MdRadioModule,
-  MdSelectModule,
-  MdSliderModule,
-  MdSlideToggleModule,
-  MdMenuModule,
-  MdSidenavModule,
-  MdToolbarModule,
-  MdListModule,
-  MdGridListModule,
-  MdCardModule,
-  MdButtonToggleModule,
-  MdChipsModule,
-  MdIconModule,
-  MdProgressSpinnerModule,
-  MdProgressBarModule,
-  MdDialogModule,
-  MdTooltipModule,
-  MdSnackBarModule
+  MatButtonModule,
+  MatCheckboxModule,
+  MatAutocompleteModule,
+  MatTabsModule,
+  MatInputModule,
+  MatRadioModule,
+  MatSelectModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatMenuModule,
+  MatSidenavModule,
+  MatToolbarModule,
+  MatListModule,
+  MatGridListModule,
+  MatCardModule,
+  MatButtonToggleModule,
+  MatChipsModule,
+  MatIconModule,
+  MatProgressSpinnerModule,
+  MatProgressBarModule,
+  MatDialogModule,
+  MatTooltipModule,
+  MatSnackBarModule
 ];
 
 
