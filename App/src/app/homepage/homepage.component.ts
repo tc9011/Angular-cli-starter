@@ -8,7 +8,6 @@ import {HttpService} from "../shared/services/http.service";
 
 
 @Component({
-  moduleId: module.id,
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.scss'],

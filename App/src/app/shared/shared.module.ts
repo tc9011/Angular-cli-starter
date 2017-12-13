@@ -8,8 +8,8 @@ import { AlertModule,CarouselModule,ButtonsModule,ModalModule,TimepickerModule,T
 import {MatAutocompleteModule,MatButtonModule, MatCheckboxModule,MatTabsModule,MatInputModule,MatRadioModule,MatSelectModule,MatSliderModule,MatSlideToggleModule,MatMenuModule,MatSidenavModule,MatToolbarModule,MatListModule,MatGridListModule,MatCardModule,MatButtonToggleModule,MatChipsModule,MatIconModule,MatProgressSpinnerModule,MatProgressBarModule,MatDialogModule,MatTooltipModule,MatSnackBarModule} from '@angular/material';
 
 import { NgZorroAntdModule } from 'ng-zorro-antd';
-
 import 'hammerjs';
+import {TranslateModule} from "@ngx-translate/core";
 
 const sharedModule = [
   CommonModule,
@@ -52,7 +52,8 @@ const sharedModule = [
   MatProgressBarModule,
   MatDialogModule,
   MatTooltipModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  TranslateModule
 ];
 
 

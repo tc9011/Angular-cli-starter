@@ -8,7 +8,8 @@
     "build": "ng build --prod --aot --base-href /Angular-cli-starter/",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "extract": "ngx-translate-extract --input ./src --output ./src/assets/i18n/*.json --clean --sort --format namespaced-json"
   },
   "private": true,
   "dependencies": {
@@ -45,6 +46,7 @@
   "devDependencies": {
     "@angular/cli": "^1.6.0",
     "@angular/compiler-cli": "^4.0.2",
+    "@biesbjerg/ngx-translate-extract": "^2.3.4",
     "@types/jasmine": "~2.5.38",
     "@types/node": "~6.0.60",
     "codelyzer": "~2.0.0",
