@@ -17,6 +17,7 @@ import {NavbarModule} from "./shared/component/navbar/navbar.module";
 import {FooterModule} from "./shared/component/footer/footer.module";
 import {SidebarModule} from "./shared/component/sidebar/sidebar.module";
 import {LocalStorageService} from "./shared/services/local-storage.service";
+import {RepeatValidatorDirective} from "./shared/directive/password-match.directive";
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -25,7 +26,8 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent
+    AboutComponent,
+    RepeatValidatorDirective
   ],
   imports: [
     BrowserModule,
