@@ -15,6 +15,7 @@ import { AboutComponent } from './about/about.component';
 import {HttpService} from "./shared/services/http.service";
 import {NavbarModule} from "./shared/component/navbar/navbar.module";
 import {FooterModule} from "./shared/component/footer/footer.module";
+import {SidebarModule} from "./shared/component/sidebar/sidebar.module";
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -32,6 +33,7 @@ export function createTranslateLoader(http: HttpClient) {
     FooterModule,
     BrowserAnimationsModule,
     SharedModule,
+    SidebarModule,
     RouterModule.forRoot(appRoutes),
     TranslateModule.forRoot({
       loader: {

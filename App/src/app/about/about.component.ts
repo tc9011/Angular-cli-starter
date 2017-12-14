@@ -6,6 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
+  menuData = [
+    {
+      title: 'title1',
+      routeLink: 'homepage',
+      icon: 'fa fa-address-book-o'
+    },
+    {
+      title: 'title2',
+      routeLink: 'about',
+      icon: 'fa fa-user-o'
+    }
+  ];
 
   constructor() { }
 

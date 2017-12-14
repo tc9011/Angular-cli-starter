@@ -1,7 +1,16 @@
 section{
   min-height: calc(100vh - 60px);
+  margin-left: 200px;
 }
 
 #table{
   margin-top: 50px;
+}
+
+:host ::ng-deep .my-aside {
+  position: absolute;
+  top: 52px;
+  bottom: 7px;
+  left: 0;
+  height: 307px;
 }

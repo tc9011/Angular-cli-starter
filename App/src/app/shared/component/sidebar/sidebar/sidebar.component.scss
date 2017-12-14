@@ -1,0 +1,129 @@
+@import "../../../../../assets/css/core/common";
+
+$aside-prefix-cls:my-aside;
+
+.right-area{
+  margin-left: 200px;
+  padding-top: 60px;
+}
+
+.font-paletx{
+  float: none;
+  @include icon-font(20px)
+}
+
+ul,li {
+  list-style: none;
+}
+
+@mixin li-common{
+  color: #595959;
+  font-size: $font-size-normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  outline: none;
+  &:focus{
+    outline: none;
+  }
+  a{
+    display: inline-block;
+    height: 40px;
+    min-width: 199px;
+    line-height: 40px;
+    color: #595959;
+    vertical-align: middle;
+  }
+}
+
+@mixin active-common{
+  width: 100%;
+  background-color: #fff;
+  color: #108ee9!important;
+  border-left: 4px solid #108ee9;
+  a{
+    color: inherit;
+  }
+}
+
+.#{$aside-prefix-cls} {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  margin-right: 200px;
+  background-color: #f2f4f5;
+  border-right: 1px solid #e9e9e9;
+  z-index: 100;
+  overflow-y: auto;
+  &-ul{
+    margin-top: 68px;
+    float: left;
+  }
+  &-li {
+    position: relative;
+    @include li-common;
+    &-text{
+      display: inline-block;
+      overflow-x: hidden;
+    }
+    &-text-short{
+      width: 118px;
+    }
+    &-text-long{
+      width: 145px;
+    }
+    a{
+      padding-left: 20px;
+    }
+    &-active {
+      @include active-common;
+      a{
+        padding-left: 16px;
+        min-width: 195px;
+      }
+    }
+    a:hover {
+      cursor: pointer;
+      background-color: #e9e9e9;
+    }
+  }
+  &-second-li{
+    @include li-common;
+    a{
+      padding-left: 53px;
+    }
+    &-active{
+      @include active-common;
+      a{
+        padding-left: 49px!important;
+        min-width: 195px;
+      }
+    }
+  }
+  &-icon{
+    float: left;
+    font-size: 20px;
+    margin-right: 12px;
+    margin-top: 10px;
+    vertical-align: middle;
+  }
+  &-angle{
+    position: absolute;
+    left: 173px;
+    top: 10px;
+  }
+}
+
+.active {
+  color: #108ee9!important;
+}
+
+
+
+
+
+
+
+

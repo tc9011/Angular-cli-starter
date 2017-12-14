@@ -1,0 +1,28 @@
+<aside class="my-aside">
+  <ul class="my-aside-ul">
+    <ng-content></ng-content>
+
+    <ng-template ngFor let-item [ngForOf]="_items">
+      <li *ngIf="!item.children" class="my-aside-li" routerLink="{{item.routeLink}}" routerLinkActive="my-aside-li-active">
+        <a>
+          <i class="{{item.icon}} my-aside-icon"></i>
+          <span class="my-aside-li-text my-aside-li-text-long">{{item.title}}</span>
+        </a>
+      </li>
+
+      <li *ngIf="item.children" class="my-aside-li" >
+        <a (click)="item.open = !item.open" [class.active]="isActiveRoute(item.children)">
+          <i class="{{item.icon}} my-aside-icon"></i>
+          <span class="my-aside-li-text my-aside-li-text-short">{{item.title}}</span>
+        </a>
+        <i [class]="item.open ? 'fa fa-angle-down my-aside-angle' : 'fa fa-angle-down my-aside-angle'"></i>
+
+        <ul *ngIf="item.open">
+          <li *ngFor="let child of item.children" class="my-aside-second-li" routerLink="{{child.routeLink}}" routerLinkActive='my-aside-second-li-active'>
+            <a><span  class="my-aside-li-text my-aside-li-text-long">{{child.title}}</span></a>
+          </li>
+        </ul>
+      </li>
+    </ng-template>
+  </ul>
+</aside>
