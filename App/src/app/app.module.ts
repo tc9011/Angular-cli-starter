@@ -16,6 +16,7 @@ import {HttpService} from "./shared/services/http.service";
 import {NavbarModule} from "./shared/component/navbar/navbar.module";
 import {FooterModule} from "./shared/component/footer/footer.module";
 import {SidebarModule} from "./shared/component/sidebar/sidebar.module";
+import {LocalStorageService} from "./shared/services/local-storage.service";
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -43,7 +44,7 @@ export function createTranslateLoader(http: HttpClient) {
       }
     })
   ],
-  providers: [HttpService],
+  providers: [HttpService, LocalStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

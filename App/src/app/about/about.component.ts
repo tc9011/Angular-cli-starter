@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {LocalStorageService} from "../shared/services/local-storage.service";
 
 @Component({
   selector: 'app-about',
@@ -19,7 +20,7 @@ export class AboutComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private ls: LocalStorageService) { }
 
   ngOnInit() {
     $("#table").bootstrapTable({
@@ -86,6 +87,7 @@ export class AboutComponent implements OnInit {
         ]
       ]
     });
+    console.log(this.ls.get('name'));
   }
 
 }
