@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {LocalStorageService} from "../shared/services/local-storage.service";
+import {StorageService} from "../shared/services/Storage.service";
 import {TranslateService, TranslationChangeEvent} from "@ngx-translate/core";
 
 @Component({
@@ -25,7 +25,7 @@ export class AboutComponent implements OnInit {
   rowData: any;
   isDropdownOpen: boolean;
 
-  constructor(public translate: TranslateService, private ls: LocalStorageService) {
+  constructor(public translate: TranslateService) {
     this.window.operateEvents = {
       'click .delete': function (e, value, row, index) {
 

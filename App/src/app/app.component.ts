@@ -1,6 +1,6 @@
 import { Component,AfterViewInit} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
-import {LocalStorageService} from "./shared/services/local-storage.service";
+import {StorageService} from "./shared/services/Storage.service";
 
 @Component({
   selector: 'app-root',
@@ -9,11 +9,11 @@ import {LocalStorageService} from "./shared/services/local-storage.service";
 })
 export class AppComponent implements AfterViewInit{
 
-  constructor(public translate: TranslateService, private ls: LocalStorageService){
+  constructor(public translate: TranslateService, private ss: StorageService){
     translate.addLangs(['zh', 'en']);
     translate.setDefaultLang('zh');
     translate.use('zh');
-    this.ls.set('name', 'tc');
+    this.ss.setLocalStorage('name', 'tc');
   }
 
   ngAfterViewInit(){

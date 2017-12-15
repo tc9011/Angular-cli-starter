@@ -14,7 +14,7 @@ import {appRoutes} from './app.routes';
 import { AboutComponent } from './about/about.component';
 import {HttpService} from "./shared/services/http.service";
 import {SidebarModule} from "./shared/component/sidebar/sidebar.module";
-import {LocalStorageService} from "./shared/services/local-storage.service";
+import {StorageService} from "./shared/services/Storage.service";
 import {RepeatValidatorDirective} from "./shared/directive/password-match.directive";
 import {NavbarModule} from "./shared/component/navbar/navbar.module";
 
@@ -44,7 +44,7 @@ export function createTranslateLoader(http: HttpClient) {
       }
     })
   ],
-  providers: [HttpService, LocalStorageService],
+  providers: [HttpService, StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
