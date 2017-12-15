@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {StorageService} from "../shared/services/Storage.service";
 import {TranslateService, TranslationChangeEvent} from "@ngx-translate/core";
 
@@ -26,12 +26,13 @@ export class AboutComponent implements OnInit {
   isDropdownOpen: boolean;
 
   constructor(public translate: TranslateService) {
+    const that = this;
     this.window.operateEvents = {
       'click .delete': function (e, value, row, index) {
-
+        that.delete();
       },
       'click .modify': function (e, value, row, index) {
-
+        that.modify();
       }
     };
   }
@@ -71,7 +72,7 @@ export class AboutComponent implements OnInit {
 
 
     if (this.translate.currentLang === 'zh') {
-      $.extend($.fn.bootstrapTable.defaults, $.fn.bootstrapTable.locales['zh']);
+      $.extend($.fn.bootstrapTable.defaults, $.fn.bootstrapTable.locales['zh-CN']);
     } else {
       $.extend($.fn.bootstrapTable.defaults, $.fn.bootstrapTable.locales['en']);
     }
@@ -114,7 +115,7 @@ export class AboutComponent implements OnInit {
         events: 'operateEvents',
         formatter: (value, row, index) => {
           return `<div class="btn-group table-operate-float" style="position:relative;margin:0;">\
-<button class="btn btn-default authority table-operate-btn floor-settings" style="margin:0;border-right: none;">${this.translate.instant('common.edit')}</button>\
+<button class="btn btn-default authority table-operate-btn floor-settings modify" style="margin:0;border-right: none;">${this.translate.instant('common.edit')}</button>\
     <button class="btn btn-default dropdown-toggle table-operate-btn" style="margin:0;" id="dropdownMenu" \
                          data-toggle="dropdown" ><span class="caret"></span>\
                       </button>\
@@ -130,4 +131,11 @@ export class AboutComponent implements OnInit {
     return columnDefs;
   }
 
+  delete() {
+    console.log('delete');
+  }
+
+  modify() {
+    console.log('modify');
+  }
 }
