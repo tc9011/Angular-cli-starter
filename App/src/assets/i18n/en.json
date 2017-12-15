@@ -1,7 +1,17 @@
 {
+  "common": {
+    "add": "Add",
+    "delete": "Delete",
+    "edit": "Edit",
+    "operate": "Operation"
+  },
 	"nav": {
 		"about": "About",
 		"home": "Home",
 		"projectname": "ProjectName"
-	}
+	},
+  "groupmanagement": {
+    "describe": "Describe",
+    "groupname": "Group Name"
+  }
 }

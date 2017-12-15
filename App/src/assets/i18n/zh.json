@@ -1,7 +1,17 @@
 {
+  "common": {
+    "add": "新增",
+    "delete": "删除",
+    "edit": "编辑",
+    "operate": "操作"
+  },
 	"nav": {
 		"about": "关于",
 		"home": "首页",
 		"projectname": "项目名称"
-	}
+	},
+  "groupmanagement": {
+    "describe": "描述",
+    "groupname": "名称"
+  }
 }
