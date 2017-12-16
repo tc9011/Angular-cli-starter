@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {StorageService} from "../shared/services/Storage.service";
 import {TranslateService, TranslationChangeEvent} from "@ngx-translate/core";
 
 @Component({
