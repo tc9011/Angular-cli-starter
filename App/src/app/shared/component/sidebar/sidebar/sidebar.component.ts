@@ -14,34 +14,34 @@ export class SidebarComponent implements OnInit {
   *
   * 使用方法：
   * <app-sidebar [data]="menuData">
-  *   <li class="zte-aside-title">人脸识别</li>
+  *   <li class="zte-aside-title">啊啊啊啊啊</li>
   * </app-sidebar>
   *
   * menuData = [
   *  {
-  *   title: '人脸库',
+  *   title: 'title1',
   *   routeLink: 'faceDataBase',
   *   icon: 'icon font-paletx px-icon-user_20',
   *   children: [
   *       {
-  *         title: '摄像头设置',
+  *         title: 'title2',
   *         routeLink: 'cameraSettings',
   *         icon: 'icon font-paletx px-icon-webcam_20'
   *       }
   *     ]
   *   },
   *   {
-  *     title: '摄像头设置',
+  *     title: 'title3',
   *     routeLink: 'cameraSettings',
   *     icon: 'icon font-paletx px-icon-webcam_20'
   *   },
   *   {
-  *     title: '识别结果查询',
+  *     title: 'title4',
   *     routeLink: 'resultInquiries',
   *     icon: 'icon font-paletx px-icon-overview_20'
   *   },
   *   {
-  *     title: '群组管理',
+  *     title: 'title5',
   *     routeLink: 'groupManage',
   *     icon: 'icon font-paletx px-icon-project_member_20'
   *   }
