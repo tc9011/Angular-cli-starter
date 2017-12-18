@@ -13,7 +13,7 @@ export class HttpService {
   }
 
   public postData(api:string, data:any):Observable<any>{
-    return this.http.get(api, data);
+    return this.http.post(api, data);
   }
 
   public deleteData(api:string):Observable<any>{
