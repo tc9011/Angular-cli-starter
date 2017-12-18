@@ -10,9 +10,9 @@ import {StorageService} from "./shared/services/Storage.service";
 export class AppComponent implements AfterViewInit{
 
   constructor(public translate: TranslateService, private ss: StorageService){
-    translate.addLangs(['zh', 'en']);
-    translate.setDefaultLang('zh');
-    translate.use('zh');
+    translate.addLangs(['zh-CN', 'en']);
+    translate.setDefaultLang('zh-CN');
+    translate.use('zh-CN');
     this.ss.setLocalStorage('name', 'tc');
   }
 

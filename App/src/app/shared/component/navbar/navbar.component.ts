@@ -18,7 +18,7 @@ export class NavbarComponent implements OnInit {
   }
 
   useChinese() {
-    this.translate.use('zh');
+    this.translate.use('zh-CN');
   }
 
 }

@@ -69,12 +69,7 @@ export class AboutComponent implements OnInit {
       sortable: true,
     };
 
-
-    if (this.translate.currentLang === 'zh') {
-      $.extend($.fn.bootstrapTable.defaults, $.fn.bootstrapTable.locales['zh-CN']);
-    } else {
-      $.extend($.fn.bootstrapTable.defaults, $.fn.bootstrapTable.locales['en']);
-    }
+    $.extend($.fn.bootstrapTable.defaults, $.fn.bootstrapTable.locales[this.translate.currentLang]);  // locales中支持zh-CN和en这样的写法，如果i18n中json名是zh_CN或en_us这样的写法，bootstrap-table不能加载自身的国际化文件
 
     $('#table').bootstrapTable($.extend(gridOptions, {
       data: this.rowData,
