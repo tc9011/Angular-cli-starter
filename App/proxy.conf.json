@@ -1,6 +1,6 @@
 {
-  "/API": {
-    "target": "http://10.63.246.83:2017",
+  "/api": {
+    "target": "http://127.0.0.1:7300/mock/5a50f8ab12c2102876c59682",
     "secure": false,
     "logLevel": "debug",
     "changeOrigin": true

@@ -113,7 +113,7 @@ export class HomepageComponent implements OnInit {
   }
 
   postData(){
-    const api = 'API/hero';
+    const api = '/api/hero';
     const heroes = [
       { id: 0,  name: 'Zero' },
       { id: 11, name: 'Mr. Nice' },
