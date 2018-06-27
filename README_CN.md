@@ -2,9 +2,9 @@
 
 [English Document](https://github.com/tc9011/Angular-cli-starter/blob/master/README.md)
 
-node版本>= 6.9.x
+node 版本 >= 8.9.X
 
-npm版本 >=3.10.x
+npm  版本 >=5.6.X
 
 ***
 
@@ -201,6 +201,7 @@ import * as moment from 'moment';：
 9. [Proxy To Backend](https://github.com/angular/angular-cli/wiki/stories-proxy)
 10. [Invalid Host header after updating to 1.0.1](https://github.com/angular/angular-cli/issues/6070)
 11. [CSS images with relative path not included in production build](https://github.com/angular/angular-cli/issues/4806)
+12. [angular官方升级工具](https://update.angular.io/)
 
 # License
 
