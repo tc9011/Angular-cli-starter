@@ -157,7 +157,7 @@ export class XXXModule { }
 import { MdAutocompleteModule } from '@angular/material';
 @NgModule({
   imports: [
-    MdAutocompleteModule,
+    MatAutocompleteModule,
   ]
 })
 export class XXXModule { }

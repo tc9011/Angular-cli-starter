@@ -168,7 +168,7 @@ open `XXX.module.ts` and add:
 import { MdAutocompleteModule } from '@angular/material';
 @NgModule({
   imports: [
-    MdAutocompleteModule,
+    MatAutocompleteModule,
   ]
 })
 export class XXXModule { }
