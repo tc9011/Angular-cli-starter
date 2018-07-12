@@ -1,1 +1,153 @@
-/* You can add global styles to this file, and also import other style files */
+/*以下均为移动端适配代码 */
+
+// 页面适配
+// 项目中所有单位均需采用rem(视觉图的像素值)方法计算相应的虚拟像素值
+$vm_design: 360; // 根据需要替换成设计稿的值,比如设计稿的宽度是360px
+$vm_fontsize: $vm_design / 10;  // 是$vm_design的十分之一
+
+@function rem($px) {
+  @return ($px / $vm_fontsize) * 1rem;
+}
+
+// 页面适配
+// 根元素大小使用vw单位
+html {
+  font-size: ($vm_fontsize / $vm_design) * 100vw; // 同时通过Media Queries 限制根元素最大最小值
+  @media screen and (max-width: 320px) {
+    font-size: 32px;
+  }
+  @media screen and (min-width: 540px) {
+    font-size: 54px;
+  }
+}
+
+// body 也增加最大最小宽度限制,避免默认100%宽度的 block 元素跟随 body 而过大过小
+body {
+  max-width: 540px;
+  min-width: 320px;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background: transparent;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td,
+hr,
+button,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+sumary {
+  margin: 0;
+  padding: 0;
+}
+
+//color
+$white-normal:           #ffffff;
+
+$blue-normal:            #00abff;
+$blue-dark:              #00a3f5;
+$blue-darkest:           #009ceb;
+
+$nav-blue-normal:        #1898eb;
+$nav-blue-dark:          #168cdb;
+$nav-blue-darkest:       #1483cc;
+
+$red-normal:             #ff5b55;
+$red-dark:               #f55651;
+$red-darkest:            #eb534d;
+
+$green-normal:           #73cf22;
+$green-dark:             #6cc41f;
+$green-darkest:          #67ba1e;
+
+$yellow-normal:          #f7c515;
+$yellow-dark:            #edbe13;
+$yellow-darkest:         #e3b612;
+
+$font-gray-normal:       #4d5761;
+$font-gray-light:        #7c868d;
+$font-gray-lightest:     #c2c6c9;
+
+$gray-grade-1:           #4d5761;
+$gray-grade-2:           #7c868d;
+$gray-grade-3:           #c2c6c9;
+$gray-grade-4:           #dddddd;
+$gray-grade-5:           #e6e6e6;
+$gray-grade-6:           #eeeeee;
+$gray-grade-7:           #f2f2f2;
+$gray-grade-8:           #f8f8f8;
+$gray-grade-9:           #fcfcfc;
+
+$border-gray-1:          #f5f5f5;
+
+//font-size
+$font-size-normal:       14px;
+$font-size-xl:           24px;
+$font-size-lg:           18px;
+$font-size-sm:           12px;
+$button-height:          36px;
+$button-width:           100px;
+$button-height-min:      30px;
+$button-border:          0;
+$button-border-color:    1px solid #eeeeee;
+
+@mixin font($font-size: $font-size-normal, $color:$font-gray-normal) {
+  font-family: 'Hiragino Sans GB', 'Microsoft YaHei', 'Segoe UI', 'Arial', 'san-serif';
+  font-weight: normal;
+  font-size: $font-size;
+  line-height: $font-size;
+  color: $color;
+}
+
+@mixin icon-font($size) {
+  width: $size;
+  height: $size;
+  line-height: $size;
+  font-size: $size;
+}
