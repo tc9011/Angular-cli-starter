@@ -1,6 +1,5 @@
 /*以下均为移动端适配代码 */
 
-// 页面适配
 // 项目中所有单位均需采用rem(视觉图的像素值)方法计算相应的虚拟像素值
 $vm_design: 360; // 根据需要替换成设计稿的值,比如设计稿的宽度是360px
 $vm_fontsize: $vm_design / 10;  // 是$vm_design的十分之一
@@ -9,7 +8,6 @@ $vm_fontsize: $vm_design / 10;  // 是$vm_design的十分之一
   @return ($px / $vm_fontsize) * 1rem;
 }
 
-// 页面适配
 // 根元素大小使用vw单位
 html {
   font-size: ($vm_fontsize / $vm_design) * 100vw; // 同时通过Media Queries 限制根元素最大最小值
