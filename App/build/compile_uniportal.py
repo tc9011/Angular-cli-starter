@@ -36,7 +36,7 @@ def build_web( strWorkSpace):
         #cmd = "npm run build.dev"
 		#cmd = "npm run build.prod"
         #cmd = "/root/Downloads/node-v7.9.0-linux-x64/lib/node_modules/@angular/cli/bin/ng build --prod --aot"
-        cmd = "./node_modules/@angular/cli/bin/ng build --aot --prod --bh /faceportal/"
+        cmd = "./node_modules/@angular/cli/bin/ng build --prod --aot --base-href /Angular-cli-starter/"
     os.system(cmd)
     os.chdir(strCurDir)
     if (not os.path.exists(os.path.join(tool.get_uniportal_verfile(strWorkSpace),"index.html"))):
