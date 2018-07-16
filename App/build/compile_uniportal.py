@@ -79,7 +79,7 @@ if __name__ == '__main__':
     if(build_web(strWorkSpace)):
         copy_version(strWorkSpace)
         mount_export()
-        #build_uniportal()
+        build_uniportal()
 
     else:
         print "<-- build_web fail--"
