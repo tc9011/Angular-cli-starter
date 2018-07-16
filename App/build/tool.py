@@ -10,7 +10,7 @@ def get_uniportal_verfile(strWorkSpace):
     return os.path.join(strWorkSpace,"dist")
 
 def get_uniportal_resfile(strWorkSpace):
-    return os.path.join(strWorkSpace,"build","faceportal")
+    return os.path.join(strWorkSpace,"build","Angular-cli-starter")
 
 # def get_complie(strWorkSpace):
 #     return os.path.join(strWorkSpace,"build","complie")
