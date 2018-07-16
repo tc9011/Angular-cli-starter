@@ -9,9 +9,6 @@ def deldist(strWorkSpace):
     os.system(delcmd)
 
 def copy_nodemodule():
-   # cmdtar = " tar xf /root/web2.0/node_modules/node_modules.tar.gz -C ../"
-   # if(os.path.exists("/root/web2.0/node_modules/node_modules.tar.gz")):
-    #    os.system(cmdtar)
     cmdtar = "time rsync -avzp --exclude 'node_modules-19branch.tar.gz' 10.63.241.46::node_modules_rsync_server ."
     tarnode = " tar xf node_modules.tar.gz -C ../"
     tarnode1 = " tar xf node_modules.tar.gz -C ./"
@@ -28,14 +25,10 @@ def build_web( strWorkSpace):
     strCurDir = os.getcwd()
     os.chdir(strWorkSpace)
 
-    # os.system("unzip -o node_modules.zip")
     if(os.path.exists("/root/web2.0/node6")):
         print "/root/web2.0/node6"
         cmd = "/root/web2.0/node /root/web2.0/npm run build.prod"
     else:
-        #cmd = "npm run build.dev"
-		#cmd = "npm run build.prod"
-        #cmd = "/root/Downloads/node-v7.9.0-linux-x64/lib/node_modules/@angular/cli/bin/ng build --prod --aot"
         cmd = "./node_modules/@angular/cli/bin/ng build --prod --aot --base-href /Angular-cli-starter/"
     os.system(cmd)
     os.chdir(strCurDir)
@@ -74,7 +67,6 @@ def mount_export():
 
 if __name__ == '__main__':
     strWorkSpace = os.path.abspath(os.path.join(os.path.dirname(__file__),os.pardir))
-    #copy_nodemodule()
     deldist(strWorkSpace)
     if(build_web(strWorkSpace)):
         copy_version(strWorkSpace)
