@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import {TranslateService, TranslationChangeEvent} from "@ngx-translate/core";
+import { TranslateService, TranslationChangeEvent } from '@ngx-translate/core';
 import { NotificationEntity, NotificationService } from '../shared/services/notification.service';
 import { Subscription } from 'rxjs';
 import { AutoUnsubscribe } from '../utils/autoUnsubscribe';
@@ -69,7 +69,8 @@ export class AboutComponent implements OnInit, OnDestroy {
     this.initTable();
   }
 
-  ngOnDestroy() {}
+  ngOnDestroy() {
+  }
 
   initTable() {
     const gridOptions: any = {
