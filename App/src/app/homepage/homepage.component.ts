@@ -105,7 +105,7 @@ export class HomepageComponent implements OnInit, OnDestroy {
 
     this._subscription = this.notificationService.getNotification().subscribe((data: NotificationEntity) => {
       switch (data.act) {
-        case 'about':
+        case 'test':
           console.log(data);
           break;
       }
