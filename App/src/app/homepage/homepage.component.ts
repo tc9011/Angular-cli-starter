@@ -107,6 +107,7 @@ export class HomepageComponent implements OnInit, OnDestroy {
       switch (data.act) {
         case 'test':
           console.log(data);
+          console.log('this is homepage component in homepage module');
           break;
       }
     });

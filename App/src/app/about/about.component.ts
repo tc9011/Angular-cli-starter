@@ -1,12 +1,15 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import {TranslateService, TranslationChangeEvent} from "@ngx-translate/core";
+import { NotificationEntity, NotificationService } from '../shared/services/notification.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent implements OnInit, OnDestroy {
+  _subscription: Subscription;
   menuData = [
     {
       title: 'title1',
@@ -24,7 +27,7 @@ export class AboutComponent implements OnInit {
   rowData: any;
   isDropdownOpen: boolean;
 
-  constructor(public translate: TranslateService) {
+  constructor(public translate: TranslateService, private notificationService: NotificationService) {
     const that = this;
     this.window.operateEvents = {
       'click .delete': function (e, value, row, index) {
@@ -51,9 +54,22 @@ export class AboutComponent implements OnInit {
       $('#table').bootstrapTable('destroy');
       this.initTable();
     });
+
+    this._subscription = this.notificationService.getNotification().subscribe((data: NotificationEntity) => {
+      switch (data.act) {
+        case 'test':
+          console.log(data);
+          console.log('this is about component in homepage module');
+          break;
+      }
+    });
+
     this.initTable();
   }
 
+  ngOnDestroy() {
+    this._subscription.unsubscribe();
+  }
 
   initTable() {
     const gridOptions: any = {
