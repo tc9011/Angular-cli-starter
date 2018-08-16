@@ -2,12 +2,14 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import {TranslateService, TranslationChangeEvent} from "@ngx-translate/core";
 import { NotificationEntity, NotificationService } from '../shared/services/notification.service';
 import { Subscription } from 'rxjs';
+import { AutoUnsubscribe } from '../utils/autoUnsubscribe';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
+@AutoUnsubscribe()
 export class AboutComponent implements OnInit, OnDestroy {
   _subscription: Subscription;
   menuData = [
@@ -67,9 +69,7 @@ export class AboutComponent implements OnInit, OnDestroy {
     this.initTable();
   }
 
-  ngOnDestroy() {
-    this._subscription.unsubscribe();
-  }
+  ngOnDestroy() {}
 
   initTable() {
     const gridOptions: any = {

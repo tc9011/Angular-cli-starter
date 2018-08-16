@@ -7,6 +7,7 @@ import {flyIn} from "../shared/animations/fly-in";
 import {HttpService} from "../shared/services/http.service";
 import { NotificationEntity, NotificationService } from '../shared/services/notification.service';
 import { Subscription } from 'rxjs/index';
+import { AutoUnsubscribe } from '../utils/autoUnsubscribe';
 
 
 @Component({
@@ -15,6 +16,7 @@ import { Subscription } from 'rxjs/index';
   styleUrls: ['./homepage.component.scss'],
   animations: [fadeIn,flyIn]
 })
+@AutoUnsubscribe()
 export class HomepageComponent implements OnInit, OnDestroy {
   animation:any;
   time:any;
@@ -113,9 +115,7 @@ export class HomepageComponent implements OnInit, OnDestroy {
     });
   }
 
-  ngOnDestroy() {
-    this._subscription.unsubscribe();
-  }
+  ngOnDestroy() {}
 
   createCharts() {
     let that = this;
