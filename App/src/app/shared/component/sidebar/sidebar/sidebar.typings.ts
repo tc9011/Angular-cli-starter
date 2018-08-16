@@ -3,5 +3,5 @@ export class MenuData {
   icon?: string;
   routeLink?: string;
   children?: MenuData[];
-  open:boolean = false;
+  open: boolean = false;
 }

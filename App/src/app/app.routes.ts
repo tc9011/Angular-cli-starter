@@ -1,13 +1,13 @@
-import {AboutComponent} from "./about/about.component";
+import { AboutComponent } from './about/about.component';
 
-export const appRoutes=[
+export const appRoutes = [
   {
-    path:'',
-    redirectTo:'homepage',
-    pathMatch:'full'
+    path: '',
+    redirectTo: 'homepage',
+    pathMatch: 'full'
   },
   {
-    path:'homepage',
+    path: 'homepage',
     loadChildren: './homepage/homepage.module#HomepageModule',    //lazy load
   },
   {
@@ -15,7 +15,7 @@ export const appRoutes=[
     component: AboutComponent,
   },
   {
-    path:'**',//fallback router must in the last
+    path: '**',//fallback router must in the last
     loadChildren: './homepage/homepage.module#HomepageModule'
   }
 ];

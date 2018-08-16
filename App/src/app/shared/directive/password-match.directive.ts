@@ -1,12 +1,12 @@
-import {Attribute, Directive, forwardRef} from '@angular/core';
-import {NG_VALIDATORS, Validator, AbstractControl, FormGroup, ValidatorFn} from '@angular/forms';
+import { Attribute, Directive, forwardRef } from '@angular/core';
+import { NG_VALIDATORS, Validator, AbstractControl, FormGroup, ValidatorFn } from '@angular/forms';
 
-export function  validateEqual(passwordKey: string, confirmPasswordKey: string): ValidatorFn {
-  return (group: FormGroup): {[key: string]: any} => {
+export function validateEqual(passwordKey: string, confirmPasswordKey: string): ValidatorFn {
+  return (group: FormGroup): { [key: string]: any } => {
     const password = group.controls[passwordKey];
     const confirmPassword = group.controls[confirmPasswordKey];
     if (password.value !== confirmPassword.value) {
-      return { validateEqual: true };
+      return {validateEqual: true};
     }
     return null;
   }
@@ -17,7 +17,7 @@ export function  validateEqual(passwordKey: string, confirmPasswordKey: string):
   providers: [
     {
       provide: NG_VALIDATORS,
-      useExisting: forwardRef(()=>RepeatValidatorDirective),
+      useExisting: forwardRef(() => RepeatValidatorDirective),
       multi: true
     }
   ]
@@ -32,16 +32,17 @@ export function  validateEqual(passwordKey: string, confirmPasswordKey: string):
  *-----------------------------------如何使用------------------------------------------------------------------
 */
 
-export class RepeatValidatorDirective implements Validator{
+export class RepeatValidatorDirective implements Validator {
   constructor(
     @Attribute('validateEqual') public validateEqual: string,
-    @Attribute('reverse') public reverse: string) { }
+    @Attribute('reverse') public reverse: string) {
+  }
 
   private get isReverse() {
     if (!this.reverse) {
       return false;
     }
-    return this.reverse === 'true' ? true: false;
+    return this.reverse === 'true' ? true : false;
   }
 
   validate(c: AbstractControl): { [key: string]: any } {

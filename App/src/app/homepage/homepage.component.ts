@@ -2,9 +2,9 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import echarts from 'echarts';
 import * as moment from 'moment';
-import {fadeIn} from "../shared/animations/fade-in";
-import {flyIn} from "../shared/animations/fly-in";
-import {HttpService} from "../shared/services/http.service";
+import { fadeIn } from '../shared/animations/fade-in';
+import { flyIn } from '../shared/animations/fly-in';
+import { HttpService } from '../shared/services/http.service';
 import { NotificationEntity, NotificationService } from '../shared/services/notification.service';
 import { Subscription } from 'rxjs/index';
 import { AutoUnsubscribe } from '../utils/autoUnsubscribe';
@@ -14,15 +14,15 @@ import { AutoUnsubscribe } from '../utils/autoUnsubscribe';
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.scss'],
-  animations: [fadeIn,flyIn]
+  animations: [fadeIn, flyIn]
 })
 @AutoUnsubscribe()
 export class HomepageComponent implements OnInit, OnDestroy {
-  animation:any;
-  time:any;
-  demoValue:number;
+  animation: any;
+  time: any;
+  demoValue: number;
 
-  option:any = {
+  option: any = {
     title: {
       text: 'ECharts 入门示例',
       textStyle: {
@@ -63,7 +63,7 @@ export class HomepageComponent implements OnInit, OnDestroy {
         fontSize: 12,
       },
       show: true,
-      data: ['销量','售22222222价']
+      data: ['销量', '售22222222价']
     },
     grid: {
       show: false,
@@ -72,7 +72,7 @@ export class HomepageComponent implements OnInit, OnDestroy {
 
     },
     xAxis: {
-      data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"],
+      data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子'],
       axisLabel: {
         interval: 0,
       }
@@ -87,7 +87,7 @@ export class HomepageComponent implements OnInit, OnDestroy {
       name: '销量',
       type: 'line',
       data: [5, 20, 36, 10, 10, 2000000]
-    },{
+    }, {
       name: '售22222222价',
       type: 'line',
       data: [500, 2099, 3699, 1099, 1990, 2000000]
@@ -95,14 +95,14 @@ export class HomepageComponent implements OnInit, OnDestroy {
   };
   _subscription: Subscription;
 
-  constructor(private http: HttpService, private notificationService: NotificationService){
+  constructor(private http: HttpService, private notificationService: NotificationService) {
     this.demoValue = 1;
   }
 
   ngOnInit() {
     this.animation = 'void';
     this.createCharts();
-    $("#jq").css("background-color", "yellow");
+    $('#jq').css('background-color', 'yellow');
     this.time = moment().format();
 
     this._subscription = this.notificationService.getNotification().subscribe((data: NotificationEntity) => {
@@ -115,33 +115,34 @@ export class HomepageComponent implements OnInit, OnDestroy {
     });
   }
 
-  ngOnDestroy() {}
+  ngOnDestroy() {
+  }
 
   createCharts() {
     let that = this;
-    let dom:any = document.getElementById("main");
-    let myChart:any = echarts.init(dom, 'macarons');
+    let dom: any = document.getElementById('main');
+    let myChart: any = echarts.init(dom, 'macarons');
     myChart.setOption(that.option);
   }
 
-  toggleState(){
-    this.animation = (this.animation == 'void'? '*' : 'void');
+  toggleState() {
+    this.animation = (this.animation == 'void' ? '*' : 'void');
   }
 
-  postData(){
+  postData() {
     const api = '/api/hero';
     const heroes = [
-      { id: 0,  name: 'Zero' },
-      { id: 11, name: 'Mr. Nice' },
-      { id: 12, name: 'Narco' },
-      { id: 13, name: 'Bombasto' },
-      { id: 14, name: 'Celeritas' },
-      { id: 15, name: 'Magneta' },
-      { id: 16, name: 'RubberMan' },
-      { id: 17, name: 'Dynama' },
-      { id: 18, name: 'Dr IQ' },
-      { id: 19, name: 'Magma' },
-      { id: 20, name: 'Tornado' }
+      {id: 0, name: 'Zero'},
+      {id: 11, name: 'Mr. Nice'},
+      {id: 12, name: 'Narco'},
+      {id: 13, name: 'Bombasto'},
+      {id: 14, name: 'Celeritas'},
+      {id: 15, name: 'Magneta'},
+      {id: 16, name: 'RubberMan'},
+      {id: 17, name: 'Dynama'},
+      {id: 18, name: 'Dr IQ'},
+      {id: 19, name: 'Magma'},
+      {id: 20, name: 'Tornado'}
     ];
     this.http.postData(api, heroes).subscribe(() => {
       console.log('post data');

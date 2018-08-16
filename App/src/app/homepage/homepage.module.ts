@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes }  from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
-import {HomepageComponent} from "./homepage.component";
-import {homepageRoutes} from "./homepage.routes";
-import {SharedModule} from "../shared/shared.module";
+import { HomepageComponent } from './homepage.component';
+import { homepageRoutes } from './homepage.routes';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -16,4 +16,5 @@ import {SharedModule} from "../shared/shared.module";
   declarations: [HomepageComponent],
   providers: []
 })
-export class HomepageModule { }
+export class HomepageModule {
+}

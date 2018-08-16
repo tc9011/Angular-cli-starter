@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {RouterModule} from "@angular/router";
+import { RouterModule } from '@angular/router';
 
-import {SharedModule} from "../../shared.module";
-import {SidebarComponent} from "./sidebar/sidebar.component";
+import { SharedModule } from '../../shared.module';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   imports: [
@@ -14,4 +14,5 @@ import {SidebarComponent} from "./sidebar/sidebar.component";
   declarations: [SidebarComponent],
   exports: [SidebarComponent]
 })
-export class SidebarModule { }
+export class SidebarModule {
+}

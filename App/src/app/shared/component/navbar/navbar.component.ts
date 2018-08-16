@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {TranslateService} from "@ngx-translate/core";
+import { TranslateService } from '@ngx-translate/core';
 import { NotificationService } from '../../services/notification.service';
 
 @Component({
@@ -9,7 +9,8 @@ import { NotificationService } from '../../services/notification.service';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(public translate: TranslateService, private notificationService: NotificationService) { }
+  constructor(public translate: TranslateService, private notificationService: NotificationService) {
+  }
 
   ngOnInit() {
   }
@@ -24,8 +25,8 @@ export class NavbarComponent implements OnInit {
 
   useNotification() {
     this.notificationService.publish({
-      act: "test",
-      data: "this message is from navbar module"
+      act: 'test',
+      data: 'this message is from navbar module'
     })
   }
 
