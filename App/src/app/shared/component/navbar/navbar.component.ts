@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {TranslateService} from "@ngx-translate/core";
+import { NotificationService } from '../../services/notification.service';
 
 @Component({
   selector: 'app-navbar',
@@ -8,7 +9,7 @@ import {TranslateService} from "@ngx-translate/core";
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(public translate: TranslateService) { }
+  constructor(public translate: TranslateService, private notificationService: NotificationService) { }
 
   ngOnInit() {
   }
@@ -19,6 +20,13 @@ export class NavbarComponent implements OnInit {
 
   useChinese() {
     this.translate.use('zh-CN');
+  }
+
+  useNotification() {
+    this.notificationService.publish({
+      act: "test",
+      data: "this message is from navbar module"
+    })
   }
 
 }

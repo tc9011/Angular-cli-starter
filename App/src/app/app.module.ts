@@ -17,6 +17,7 @@ import {SidebarModule} from "./shared/component/sidebar/sidebar.module";
 import {StorageService} from "./shared/services/Storage.service";
 import {RepeatValidatorDirective} from "./shared/directive/password-match.directive";
 import {NavbarModule} from "./shared/component/navbar/navbar.module";
+import { NotificationService } from './shared/services/notification.service';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -44,7 +45,7 @@ export function createTranslateLoader(http: HttpClient) {
       }
     })
   ],
-  providers: [HttpService, StorageService],
+  providers: [HttpService, StorageService, NotificationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

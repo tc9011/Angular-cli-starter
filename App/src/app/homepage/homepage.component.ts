@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import echarts from 'echarts';
 import * as moment from 'moment';
 import {fadeIn} from "../shared/animations/fade-in";
 import {flyIn} from "../shared/animations/fly-in";
 import {HttpService} from "../shared/services/http.service";
+import { NotificationEntity, NotificationService } from '../shared/services/notification.service';
+import { Subscription } from 'rxjs/index';
 
 
 @Component({
@@ -13,7 +15,7 @@ import {HttpService} from "../shared/services/http.service";
   styleUrls: ['./homepage.component.scss'],
   animations: [fadeIn,flyIn]
 })
-export class HomepageComponent implements OnInit {
+export class HomepageComponent implements OnInit, OnDestroy {
   animation:any;
   time:any;
   demoValue:number;
@@ -89,16 +91,29 @@ export class HomepageComponent implements OnInit {
       data: [500, 2099, 3699, 1099, 1990, 2000000]
     }]
   };
+  _subscription: Subscription;
 
-  constructor(private http: HttpService){
+  constructor(private http: HttpService, private notificationService: NotificationService){
     this.demoValue = 1;
   }
 
-  ngOnInit():void {
+  ngOnInit() {
     this.animation = 'void';
     this.createCharts();
     $("#jq").css("background-color", "yellow");
     this.time = moment().format();
+
+    this._subscription = this.notificationService.getNotification().subscribe((data: NotificationEntity) => {
+      switch (data.act) {
+        case 'about':
+          console.log(data);
+          break;
+      }
+    });
+  }
+
+  ngOnDestroy() {
+    this._subscription.unsubscribe();
   }
 
   createCharts() {
