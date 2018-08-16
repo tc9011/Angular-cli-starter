@@ -39,6 +39,7 @@
     "moment": "^2.18.1",
     "ng-zorro-antd": "^1.1.0",
     "ngx-bootstrap": "^3.0.1",
+    "node-sass": "^4.9.3",
     "rxjs": "^6.2.1",
     "typescript": "^2.7.2",
     "zone.js": "^0.8.26"
