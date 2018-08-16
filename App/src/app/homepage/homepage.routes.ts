@@ -1,9 +1,8 @@
-import { RouterModule } from '@angular/router';
-import {HomepageComponent} from "./homepage.component";
+import { HomepageComponent } from './homepage.component';
 
-export const homepageRoutes=[
+export const homepageRoutes = [
   {
-    path:'',
+    path: '',
     component: HomepageComponent
   }
 ];

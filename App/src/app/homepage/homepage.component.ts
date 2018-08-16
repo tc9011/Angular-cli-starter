@@ -126,7 +126,7 @@ export class HomepageComponent implements OnInit, OnDestroy {
   }
 
   toggleState() {
-    this.animation = (this.animation == 'void' ? '*' : 'void');
+    this.animation = (this.animation === 'void' ? '*' : 'void');
   }
 
   postData() {
