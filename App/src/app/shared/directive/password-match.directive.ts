@@ -9,7 +9,7 @@ export function validateEqual(passwordKey: string, confirmPasswordKey: string): 
       return {validateEqual: true};
     }
     return null;
-  }
+  };
 }
 
 @Directive({
@@ -56,7 +56,7 @@ export class RepeatValidatorDirective implements Validator {
     if (target && self !== target.value && !this.isReverse) {
       return {
         validateEqual: true
-      }
+      };
     }
 
     // 反向查询且值相等
@@ -71,7 +71,7 @@ export class RepeatValidatorDirective implements Validator {
     if (target && self !== target.value && this.isReverse) {
       target.setErrors({
         validateEqual: true
-      })
+      });
     }
 
     return null;
