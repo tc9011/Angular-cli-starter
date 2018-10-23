@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { NotificationService } from '../../shared/services/notification.service';
+import { NotificationService } from '../../core/notification/notification.service';
 
 @Component({
   selector: 'app-navbar',

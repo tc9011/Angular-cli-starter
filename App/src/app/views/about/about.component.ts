@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService, TranslationChangeEvent } from '@ngx-translate/core';
-import { NotificationEntity, NotificationService } from '../../shared/services/notification.service';
+import { NotificationEntity, NotificationService } from '../../core/notification/notification.service';
 import { Subscription } from 'rxjs';
 import { AutoUnsubscribe } from '../../utils/autoUnsubscribe';
 

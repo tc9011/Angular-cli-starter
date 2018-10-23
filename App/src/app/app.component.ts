@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { StorageService } from './shared/services/Storage.service';
+import { StorageService } from './core/storage/storage.service';
 
 @Component({
   selector: 'app-root',
