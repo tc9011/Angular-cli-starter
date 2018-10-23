@@ -38,7 +38,21 @@
             ]
           },
           "configurations": {
+            "hmr": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.hmr.ts"
+                }
+              ]
+            },
             "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -47,21 +61,7 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true,
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
-                }
-              ]
-            },
-            "hmr": {
-              "fileReplacements": [
-                {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.hmr.ts"
-                }
-              ]
+              "buildOptimizer": true
             }
           }
         },
@@ -71,12 +71,11 @@
             "browserTarget": "App:build"
           },
           "configurations": {
+            "hmr": {
+              "browserTarget": "App:build:hmr"
+            },
             "production": {
               "browserTarget": "App:build:production"
-            },
-            "hmr": {
-              "hmr": true,
-              "browserTarget": "App:build:hmr"
             }
           }
         },
