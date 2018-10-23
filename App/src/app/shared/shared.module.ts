@@ -48,7 +48,6 @@ import {
 import { NgZorroAntdModule } from 'ng-zorro-antd';
 import 'hammerjs';
 import { TranslateModule } from '@ngx-translate/core';
-import { FooterComponent } from './component/footer/footer.component';
 
 const sharedModule = [
   CommonModule,
@@ -98,8 +97,8 @@ const sharedModule = [
 
 @NgModule({
   imports: sharedModule,
-  declarations: [FooterComponent],
-  exports: [sharedModule, FooterComponent]
+  declarations: [],
+  exports: [sharedModule]
 })
 export class SharedModule {
 }

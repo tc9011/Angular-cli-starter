@@ -2,12 +2,12 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 
 import echarts from 'echarts';
 import * as moment from 'moment';
-import { fadeIn } from '../shared/animations/fade-in';
-import { flyIn } from '../shared/animations/fly-in';
-import { HttpService } from '../shared/services/http.service';
-import { NotificationEntity, NotificationService } from '../shared/services/notification.service';
+import { fadeIn } from '../../shared/animations/fade-in';
+import { flyIn } from '../../shared/animations/fly-in';
+import { HttpService } from '../../shared/services/http.service';
+import { NotificationEntity, NotificationService } from '../../shared/services/notification.service';
 import { Subscription } from 'rxjs/index';
-import { AutoUnsubscribe } from '../utils/autoUnsubscribe';
+import { AutoUnsubscribe } from '../../utils/autoUnsubscribe';
 
 
 @Component({
