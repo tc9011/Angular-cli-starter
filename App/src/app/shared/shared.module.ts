@@ -47,7 +47,6 @@ import {
 } from '@angular/material';
 
 import { NgZorroAntdModule } from 'ng-zorro-antd';
-import 'hammerjs';
 import { TranslateModule } from '@ngx-translate/core';
 
 const sharedModule = [

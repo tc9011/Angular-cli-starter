@@ -2,7 +2,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { TranslateService, TranslationChangeEvent } from '@ngx-translate/core';
 import { NotificationEntity, NotificationService } from '../../core/notification/notification.service';
 import { Subscription } from 'rxjs';
-import { AutoUnsubscribe } from '../../utils/autoUnsubscribe';
+import { AutoUnsubscribe } from '../../shared/utils/autoUnsubscribe';
 
 @Component({
   selector: 'app-about',

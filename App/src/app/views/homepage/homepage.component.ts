@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs';
 import { fadeIn } from '../../shared/animations/fade-in';
 import { flyIn } from '../../shared/animations/fly-in';
 import { NotificationEntity, NotificationService } from '../../core/notification/notification.service';
-import { AutoUnsubscribe } from '../../utils/autoUnsubscribe';
+import { AutoUnsubscribe } from '../../shared/utils/autoUnsubscribe';
 import { HttpService } from '../../core/http/http.service';
 
 
