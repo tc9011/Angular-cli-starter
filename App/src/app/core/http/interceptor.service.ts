@@ -28,7 +28,8 @@ import { LoadingService } from '../loading/loading.service';
 export class InterceptorService implements HttpInterceptor {
 
   constructor(private injector: Injector,
-              private storageService: StorageService) {}
+              private storageService: StorageService) {
+  }
 
   get msg(): NzMessageService {
     return this.injector.get(NzMessageService);
@@ -52,21 +53,20 @@ export class InterceptorService implements HttpInterceptor {
         //  正确内容：{ status: 0, response: {  } }
         // 则以下代码片断可直接适用
         if (event instanceof HttpResponse) {
-            const body: any = event.body;
-            if (event.url.includes('i18n')) {
-              return of(event);
-            } else if (body && body.status !== 0) {
-              console.log(body);
-                this.msg.error(body.message);
-                // 继续抛出错误中断后续所有 Pipe、subscribe 操作，因此：
-                // this.http.get('/').subscribe() 并不会触发
-                return throwError({});
-            } else {
-                // 重新修改 `body` 内容为 `response` 内容，对于绝大多数场景已经无须再关心业务状态码
-                return of(new HttpResponse(Object.assign(event, { body: body.response })));
-                // 或者依然保持完整的格式
-                // return of(event);
-            }
+          const body: any = event.body;
+          if (!event.url.includes('api')) {
+            return of(event);
+          } else if (body && body.status !== 0) {
+            this.msg.error(body.message);
+            // 继续抛出错误中断后续所有 Pipe、subscribe 操作，因此：
+            // this.http.get('/').subscribe() 并不会触发
+            return throwError({});
+          } else {
+            // 重新修改 `body` 内容为 `response` 内容，对于绝大多数场景已经无须再关心业务状态码
+            return of(new HttpResponse(Object.assign(event, {body: body.response})));
+            // 或者依然保持完整的格式
+            // return of(event);
+          }
         }
         break;
       case 400:   // 请求地址不存在或包含不支持参数
@@ -110,13 +110,11 @@ export class InterceptorService implements HttpInterceptor {
   intercept(
     req: HttpRequest<any>,
     next: HttpHandler,
-  ): Observable<
-    | HttpSentEvent
+  ): Observable<| HttpSentEvent
     | HttpHeaderResponse
     | HttpProgressEvent
     | HttpResponse<any>
-    | HttpUserEvent<any>
-    > {
+    | HttpUserEvent<any>> {
     const url = req.url;
     const currentUser = JSON.parse(this.storageService.getLocalStorage('currentUser'));
     let newReq = req.clone({
