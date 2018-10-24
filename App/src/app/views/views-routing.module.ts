@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { GlobalComponent } from '../layout/global/global.component';
+import { Exception403Component } from './exception/403/exception403.component';
+import { Exception404Component } from './exception/404/exception404.component';
+import { Exception500Component } from './exception/500/exception500.component';
 
 const routes: Routes = [
   {
@@ -22,6 +25,18 @@ const routes: Routes = [
         component: AboutComponent,
       },
     ]
+  },
+  {
+    path: '403',
+    component: Exception403Component,
+  },
+  {
+    path: '404',
+    component: Exception404Component,
+  },
+  {
+    path: '500',
+    component: Exception500Component,
   }
 ];
 
