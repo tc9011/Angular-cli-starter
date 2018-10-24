@@ -42,6 +42,7 @@ export class InterceptorService implements HttpInterceptor {
     event: HttpResponse<any> | HttpErrorResponse,
   ): Observable<any> {
     this.injector.get(LoadingService).end();
+    console.log(event);
     // 业务处理：一些通用操作
     switch (event.status) {
       case 200:
@@ -52,7 +53,10 @@ export class InterceptorService implements HttpInterceptor {
         // 则以下代码片断可直接适用
         if (event instanceof HttpResponse) {
             const body: any = event.body;
-            if (body && body.status !== 0) {
+            if (event.url.includes('i18n')) {
+              return of(event);
+            } else if (body && body.status !== 0) {
+              console.log(body);
                 this.msg.error(body.message);
                 // 继续抛出错误中断后续所有 Pipe、subscribe 操作，因此：
                 // this.http.get('/').subscribe() 并不会触发

@@ -14,7 +14,7 @@ import { LoadingService } from './loading/loading.service';
   ],
   declarations: [],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true},
+    { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },
     HttpService,
     StorageService,
     NotificationService,
