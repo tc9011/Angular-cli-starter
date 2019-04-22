@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Optional, SkipSelf } from '@angular/core'
 import { CommonModule } from '@angular/common';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
@@ -7,6 +7,7 @@ import { HttpService } from './http/http.service';
 import { StorageService } from './storage/storage.service';
 import { NotificationService } from './notification/notification.service';
 import { LoadingService } from './loading/loading.service';
+import { throwIfAlreadyLoaded } from './module-import-guard'
 
 @NgModule({
   imports: [
@@ -21,4 +22,8 @@ import { LoadingService } from './loading/loading.service';
     LoadingService
   ]
 })
-export class CoreModule { }
+export class CoreModule {
+  constructor( @Optional() @SkipSelf() parentModule: CoreModule) {
+    throwIfAlreadyLoaded(parentModule, 'CoreModule');
+  }
+}
