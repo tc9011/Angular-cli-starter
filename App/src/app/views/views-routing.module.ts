@@ -5,6 +5,7 @@ import { GlobalComponent } from '../layout/global/global.component';
 import { Exception403Component } from './exception/403/exception403.component';
 import { Exception404Component } from './exception/404/exception404.component';
 import { Exception500Component } from './exception/500/exception500.component';
+import {EchartsComponent} from "./echarts/echarts.component";
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
       {
         path: 'about',
         component: AboutComponent,
+      },
+      {
+        path: 'echarts',
+        component: EchartsComponent,
       },
     ]
   },

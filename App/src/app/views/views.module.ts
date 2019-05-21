@@ -8,6 +8,7 @@ import { Exception403Component } from './exception/403/exception403.component';
 import { Exception404Component } from './exception/404/exception404.component';
 import { ExceptionComponent } from './exception/exception/exception.component';
 import { Exception500Component } from './exception/500/exception500.component';
+import { EchartsComponent } from './echarts/echarts.component';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { Exception500Component } from './exception/500/exception500.component';
     Exception403Component,
     Exception404Component,
     Exception500Component,
+    EchartsComponent,
   ]
 })
 export class ViewsModule { }
