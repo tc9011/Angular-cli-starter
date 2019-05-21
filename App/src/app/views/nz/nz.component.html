@@ -1,0 +1,13 @@
+<ul class="cards-list">
+  <li *ngFor="let item of cardsList">
+    <nz-card style="width:300px;" [nzTitle]="item" [nzExtra]="extraTemplate">
+      <p>Card content</p>
+      <p>Card content</p>
+      <p>Card content</p>
+    </nz-card>
+    <ng-template #extraTemplate>
+      <a>More</a>
+    </ng-template>
+  </li>
+</ul>
+

@@ -10,6 +10,7 @@ import { ExceptionComponent } from './exception/exception/exception.component';
 import { Exception500Component } from './exception/500/exception500.component';
 import { EchartsComponent } from './echarts/echarts.component';
 import { TableComponent } from './table/table.component';
+import { NzComponent } from './nz/nz.component';
 
 @NgModule({
   imports: [
@@ -25,6 +26,7 @@ import { TableComponent } from './table/table.component';
     Exception500Component,
     EchartsComponent,
     TableComponent,
+    NzComponent,
   ]
 })
 export class ViewsModule { }

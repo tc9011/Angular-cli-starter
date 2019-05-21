@@ -19,8 +19,8 @@ export class AboutComponent implements OnInit, OnDestroy {
       icon: 'fa fa-address-book-o'
     },
     {
-      title: 'title2',
-      routeLink: 'about',
+      title: 'nz',
+      routeLink: 'nz',
       icon: 'fa fa-user-o'
     }
   ];

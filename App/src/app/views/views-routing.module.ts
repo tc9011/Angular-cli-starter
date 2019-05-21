@@ -7,6 +7,7 @@ import { Exception404Component } from './exception/404/exception404.component';
 import { Exception500Component } from './exception/500/exception500.component';
 import {EchartsComponent} from "./echarts/echarts.component";
 import {TableComponent} from "./table/table.component";
+import {NzComponent} from "./nz/nz.component";
 
 const routes: Routes = [
   {
@@ -34,7 +35,11 @@ const routes: Routes = [
           {
             path: 'table',
             component:TableComponent,
-          }
+          },
+          {
+            path: ':name',
+            component: NzComponent,
+          },
         ]
       },
       {
