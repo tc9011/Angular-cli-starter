@@ -16,8 +16,8 @@ import { HttpService } from '../../core/http/http.service';
 })
 @AutoUnsubscribe()
 export class HomepageComponent implements OnInit, OnDestroy {
-  animation: any;
-  time: any;
+  animation: string;
+  time: string;
 
   _subscription: Subscription;
 
