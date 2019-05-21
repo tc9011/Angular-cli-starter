@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import echarts from 'echarts';
 
 @Component({
@@ -79,6 +79,8 @@ export class EchartsComponent implements OnInit {
     }]
   };
 
+  @ViewChild('echarts') echartsElement: ElementRef;
+
   constructor() { }
 
   ngOnInit() {
@@ -86,8 +88,7 @@ export class EchartsComponent implements OnInit {
   }
 
   createCharts() {
-    let dom: any = document.getElementById('echarts');
-    let myChart: any = echarts.init(dom, 'macarons');
+    let myChart = echarts.init(this.echartsElement.nativeElement, 'macarons');
     myChart.setOption(this.option);
   }
 
