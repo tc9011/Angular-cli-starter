@@ -11,32 +11,13 @@
       A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
       bred for hunting.
     </p>
+    <p [@flyIn]="animation">I'm animation</p>
   </mat-card-content>
   <mat-card-actions>
     <button mat-button (click)="postData()">LIKE</button>
-    <button mat-button>SHARE</button>
+    <button mat-button (click)="toggleState()">Active animation</button>
   </mat-card-actions>
 </mat-card>
-
-
-<!--ng-zorro-antd-->
-<p class="antd">antd组件：</p>
-<nz-input-number class="antd" [(ngModel)]="demoValue" [nzMin]="1" [nzMax]="10" [nzStep]="1"></nz-input-number>
-<!--ng-zorro-antd-->
-
-<!--animation example-->
-<button Mat-button class="animation-button" (click)="toggleState()">active animation</button>
-
-<p [@flyIn]="animation" [@fadeIn]="animation">I'm animation</p>
-<!--animation example-->
-
-<!--test fontawesome-->
-<div class="fontawesome">
-  <i class="fa fa-american-sign-language-interpreting fa-5x" aria-hidden="true"></i>
-  <span>I am fontawesome</span>
-  <i class="fa fa-american-sign-language-interpreting fa-5x" aria-hidden="true"></i>
-</div>
-<!--test fontawesome-->
 
 <!--test moment-->
 <div id="moment">moment.js works ,it's {{time}} now</div>

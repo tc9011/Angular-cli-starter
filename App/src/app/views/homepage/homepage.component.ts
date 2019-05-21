@@ -3,7 +3,6 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import * as moment from 'moment';
 import { Subscription } from 'rxjs';
 
-import { fadeIn } from '../../shared/animations/fade-in';
 import { flyIn } from '../../shared/animations/fly-in';
 import { NotificationEntity, NotificationService } from '../../core/notification/notification.service';
 import { AutoUnsubscribe } from '../../shared/utils/autoUnsubscribe';
@@ -13,18 +12,16 @@ import { HttpService } from '../../core/http/http.service';
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.scss'],
-  animations: [fadeIn, flyIn]
+  animations: [flyIn]
 })
 @AutoUnsubscribe()
 export class HomepageComponent implements OnInit, OnDestroy {
   animation: any;
   time: any;
-  demoValue: number;
 
   _subscription: Subscription;
 
   constructor(private http: HttpService, private notificationService: NotificationService) {
-    this.demoValue = 1;
   }
 
   ngOnInit() {
@@ -46,7 +43,7 @@ export class HomepageComponent implements OnInit, OnDestroy {
   }
 
   toggleState() {
-    this.animation = (this.animation === 'void' ? '*' : 'void');
+    this.animation = this.animation === 'void' ? '*' : 'void';
   }
 
   postData() {
