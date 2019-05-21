@@ -9,6 +9,7 @@ import { Exception404Component } from './exception/404/exception404.component';
 import { ExceptionComponent } from './exception/exception/exception.component';
 import { Exception500Component } from './exception/500/exception500.component';
 import { EchartsComponent } from './echarts/echarts.component';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   imports: [
@@ -23,6 +24,7 @@ import { EchartsComponent } from './echarts/echarts.component';
     Exception404Component,
     Exception500Component,
     EchartsComponent,
+    TableComponent,
   ]
 })
 export class ViewsModule { }

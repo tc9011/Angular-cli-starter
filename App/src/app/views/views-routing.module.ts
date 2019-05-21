@@ -6,6 +6,7 @@ import { Exception403Component } from './exception/403/exception403.component';
 import { Exception404Component } from './exception/404/exception404.component';
 import { Exception500Component } from './exception/500/exception500.component';
 import {EchartsComponent} from "./echarts/echarts.component";
+import {TableComponent} from "./table/table.component";
 
 const routes: Routes = [
   {
@@ -24,6 +25,17 @@ const routes: Routes = [
       {
         path: 'about',
         component: AboutComponent,
+        children: [
+          {
+            path: '',
+            redirectTo: 'table',
+            pathMatch: 'full'
+          },
+          {
+            path: 'table',
+            component:TableComponent,
+          }
+        ]
       },
       {
         path: 'echarts',
