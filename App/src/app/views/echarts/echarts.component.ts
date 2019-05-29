@@ -79,7 +79,7 @@ export class EchartsComponent implements OnInit {
     }]
   };
 
-  @ViewChild('echarts') echartsElement: ElementRef;
+  @ViewChild('echarts', {static: false}) echartsElement: ElementRef;
 
   constructor() { }
 
