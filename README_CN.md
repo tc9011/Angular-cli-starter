@@ -2,9 +2,7 @@
 
 [English Document](https://github.com/tc9011/Angular-cli-starter/blob/master/README.md)
 
-node 版本 >= 8.9.X
-
-npm  版本 >=5.6.X
+node 版本 >= 10.9.X
 
 ***
 

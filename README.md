@@ -6,16 +6,14 @@
 
 查看中文文档：[Angular-cli-starter](https://github.com/tc9011/Angular-cli-starter/blob/master/README_CN.md)
 
-node version >= 8.9.X
-
-npm  version >=5.6.X
+node version >= 10.9.X
 
 ***
 
 The following components and libraries have been imported  in this project:
 
 ```html
-Angular Material、ngx-bootstrap、bootstrap、bootstrap-table、karma-firefox-launcher、fontawesome、echarts、jQuery、moment.js  
+Angular Material、ngx-bootstrap、bootstrap、bootstrap-table、karma-firefox-launcher、fontawesome、echarts、jQuery、moment.js
 ```
 
 ## How to use
@@ -198,7 +196,7 @@ echarts and moment.js need to import in the required components :
 
 ```typescript
 import echarts from 'echarts';
-import * as moment from 'moment';					
+import * as moment from 'moment';
 ```
 ***
 ## Reference Article
