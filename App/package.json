@@ -5,7 +5,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open --port 4200 --host 0.0.0.0 --proxy-config proxy.conf.json --base-href /Angular-cli-starter",
-    "build": "ng analytics off && ng build --prod --aot --base-href /Angular-cli-starter/",
+    "build": "ng build --prod --aot --base-href /Angular-cli-starter/",
     "hmr": "ng serve --port 4200 --host 0.0.0.0 --open --proxy-config proxy.conf.json --hmr --configuration=hmr",
     "test": "ng test",
     "lint": "ng lint",
