@@ -6,14 +6,8 @@ node_js:
 branches:
   only:
   - master
-
-services:
-  - xvfb
   
 before_install:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
-  - sleep 3 # give xvfb some time to start
   - npx @angular/cli analytics off
 
 install:
